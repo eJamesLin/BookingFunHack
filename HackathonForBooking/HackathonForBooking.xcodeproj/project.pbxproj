@@ -26,6 +26,7 @@
 		DB50E0191E73F9B500203C7B /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB50E0131E73F9B500203C7B /* TimelineTableViewCell.xib */; };
 		DB50E01A1E73F9B500203C7B /* TimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50E0141E73F9B500203C7B /* TimelineTableViewController.swift */; };
 		DB50E01B1E73F9B500203C7B /* UIColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50E0151E73F9B500203C7B /* UIColor+Utility.swift */; };
+		DB50E01E1E745EB300203C7B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50E01D1E745EB300203C7B /* UIViewExtension.swift */; };
 		E1D6D348CFB895C5629E9C6A /* Pods_HackathonForBooking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCD3C6FD89FBA5DE77E1302 /* Pods_HackathonForBooking.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		DB50E0131E73F9B500203C7B /* TimelineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineTableViewCell.xib; sourceTree = "<group>"; };
 		DB50E0141E73F9B500203C7B /* TimelineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableViewController.swift; sourceTree = "<group>"; };
 		DB50E0151E73F9B500203C7B /* UIColor+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Utility.swift"; sourceTree = "<group>"; };
+		DB50E01D1E745EB300203C7B /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		ECCD3C6FD89FBA5DE77E1302 /* Pods_HackathonForBooking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackathonForBooking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -150,6 +152,7 @@
 		DB50E01C1E73F9BA00203C7B /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				DB50E01D1E745EB300203C7B /* UIViewExtension.swift */,
 				DB50E0151E73F9B500203C7B /* UIColor+Utility.swift */,
 			);
 			name = Utility;
@@ -289,6 +292,7 @@
 				5397944C1E73E8F600B12B96 /* TaskSingleTon.swift in Sources */,
 				DB50E0181E73F9B500203C7B /* TimelineTableViewCell.swift in Sources */,
 				DB50E00E1E73F99500203C7B /* StartViewController.swift in Sources */,
+				DB50E01E1E745EB300203C7B /* UIViewExtension.swift in Sources */,
 				539794361E727D4000B12B96 /* ViewController.swift in Sources */,
 				539794481E73CFB800B12B96 /* TaskObject.swift in Sources */,
 				DB50E0171E73F9B500203C7B /* TimelinePoint.swift in Sources */,

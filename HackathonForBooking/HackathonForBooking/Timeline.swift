@@ -2,8 +2,8 @@
 //  Timeline.swift
 //  TimelineTableViewCell
 //
-//  Created by Zheng-Xiang Ke on 2016/10/21.
-//  Copyright © 2016年 Zheng-Xiang Ke. All rights reserved.
+//  Created by CJ Lin on 2017/3/11.
+//  Copyright © 2017年 CJ Lin. All rights reserved.
 //
 
 import Foundation

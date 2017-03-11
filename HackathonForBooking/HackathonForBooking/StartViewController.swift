@@ -12,6 +12,8 @@ class StartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Give up", style: .done, target: self, action: #selector(giveUpTasks))
     }
 
     @IBAction func startSolvingTask(_ sender: Any) {
@@ -21,15 +23,19 @@ class StartViewController: UIViewController {
         TaskSingleTon.sharedInstance.taskCategory = "Taipei"
 
         //
-        if let tasks = TaskSingleTon.sharedInstance.getTasksFromDisk() {
+        if let tasks = TaskSingleTon.sharedInstance.getTasksFromDisk(), tasks.count > 0 {
             TaskSingleTon.sharedInstance.allTasks = tasks
         } else {
-            TaskSingleTon.sharedInstance.maxTaskCount = 5
             TaskSingleTon.sharedInstance.allTasks = TaskMaker().createTask()
         }
 
         TaskSingleTon.sharedInstance.saveTasks()
 
         navigationController?.pushViewController(vc, animated: true)
+    }
+
+    func giveUpTasks() {
+        TaskSingleTon.sharedInstance.allTasks = []
+        TaskSingleTon.sharedInstance.saveTasks()
     }
 }

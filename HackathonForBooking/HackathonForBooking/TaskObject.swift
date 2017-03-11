@@ -12,11 +12,20 @@ class TaskObject: NSObject, NSCoding {
     
     //Properties
     var taskCategory = TaskSingleTon.sharedInstance.taskCategory
+
     var taskID = 0
+    static let firstID = -1
+    
+    func isFirstDummyTask() -> Bool {
+        return taskID == TaskObject.firstID
+    }
+
     var taskTitle: String?
     var taskContent: String?
     var taskPhoto: UIImage?
     var taskFinished = false
+
+    var shouldBeDisplayed = false
     
     let userDefault = UserDefaults.standard
     
@@ -44,6 +53,9 @@ class TaskObject: NSObject, NSCoding {
         if let photo = aDecoder.decodeObject(forKey: "photo") as? UIImage {
             self.taskPhoto = photo
         }
+
+        self.taskFinished = aDecoder.decodeBool(forKey: "taskFinished")
+        self.shouldBeDisplayed = aDecoder.decodeBool(forKey: "shouldBeDisplayed")
     }
     
     func encode(with aCoder: NSCoder) {
@@ -51,5 +63,7 @@ class TaskObject: NSObject, NSCoding {
         aCoder.encode(self.taskTitle, forKey: "title")
         aCoder.encode(self.taskContent, forKey: "content")
         aCoder.encode(self.taskPhoto, forKey: "photo")
+        aCoder.encode(self.taskFinished, forKey: "taskFinished")
+        aCoder.encode(self.shouldBeDisplayed, forKey: "shouldBeDisplayed")
     }
 }

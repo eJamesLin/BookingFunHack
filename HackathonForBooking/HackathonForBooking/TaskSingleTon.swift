@@ -10,10 +10,7 @@ import UIKit
 
 class TaskSingleTon: NSObject {
     static let sharedInstance = TaskSingleTon()
-    
-    //task number
-    var maxTaskCount = 0
-    
+        
     var taskCategory: String?
 
     lazy var allTasks: [TaskObject] = []
@@ -44,4 +41,9 @@ class TaskSingleTon: NSObject {
         return "Task_\(category)"
     }
 
+    func didFinishTask(_ task: TaskObject) {
+        if let index = allTasks.index(of: task), (index + 1) < allTasks.count {
+            allTasks[index + 1].shouldBeDisplayed = true
+        }
+    }
 }
