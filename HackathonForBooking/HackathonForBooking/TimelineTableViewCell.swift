@@ -103,8 +103,11 @@ extension TimelineTableViewCell {
         taskNameLabel.text = nil
         descriptionLabel.text = nil
         thumbnailImageView.image = nil
+
+        timeline.frontColor = timelinePoint.color
+        timeline.backColor = timelinePoint.color
     }
-    
+
     func setupNotDisplaying() {
         titleLabel.text = nil
         taskNameLabel.text = nil
