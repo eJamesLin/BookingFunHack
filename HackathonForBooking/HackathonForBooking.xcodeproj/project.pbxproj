@@ -16,6 +16,14 @@
 		539794481E73CFB800B12B96 /* TaskObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539794471E73CFB800B12B96 /* TaskObject.swift */; };
 		5397944A1E73D8B400B12B96 /* TaskMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539794491E73D8B400B12B96 /* TaskMaker.swift */; };
 		5397944C1E73E8F600B12B96 /* TaskSingleTon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5397944B1E73E8F600B12B96 /* TaskSingleTon.swift */; };
+		DB50E00D1E73F99500203C7B /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB50E00B1E73F99500203C7B /* Start.storyboard */; };
+		DB50E00E1E73F99500203C7B /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50E00C1E73F99500203C7B /* StartViewController.swift */; };
+		DB50E0161E73F9B500203C7B /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50E0101E73F9B500203C7B /* Timeline.swift */; };
+		DB50E0171E73F9B500203C7B /* TimelinePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50E0111E73F9B500203C7B /* TimelinePoint.swift */; };
+		DB50E0181E73F9B500203C7B /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50E0121E73F9B500203C7B /* TimelineTableViewCell.swift */; };
+		DB50E0191E73F9B500203C7B /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB50E0131E73F9B500203C7B /* TimelineTableViewCell.xib */; };
+		DB50E01A1E73F9B500203C7B /* TimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50E0141E73F9B500203C7B /* TimelineTableViewController.swift */; };
+		DB50E01B1E73F9B500203C7B /* UIColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50E0151E73F9B500203C7B /* UIColor+Utility.swift */; };
 		E1D6D348CFB895C5629E9C6A /* Pods_HackathonForBooking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCD3C6FD89FBA5DE77E1302 /* Pods_HackathonForBooking.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +41,14 @@
 		5397944B1E73E8F600B12B96 /* TaskSingleTon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSingleTon.swift; sourceTree = "<group>"; };
 		A24FAD01D17A7A3D43EACCCC /* Pods-HackathonForBooking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonForBooking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackathonForBooking/Pods-HackathonForBooking.debug.xcconfig"; sourceTree = "<group>"; };
 		C17165545DD4C03D615A2B70 /* Pods-HackathonForBooking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonForBooking.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackathonForBooking/Pods-HackathonForBooking.release.xcconfig"; sourceTree = "<group>"; };
+		DB50E00B1E73F99500203C7B /* Start.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
+		DB50E00C1E73F99500203C7B /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		DB50E0101E73F9B500203C7B /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
+		DB50E0111E73F9B500203C7B /* TimelinePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelinePoint.swift; sourceTree = "<group>"; };
+		DB50E0121E73F9B500203C7B /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
+		DB50E0131E73F9B500203C7B /* TimelineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineTableViewCell.xib; sourceTree = "<group>"; };
+		DB50E0141E73F9B500203C7B /* TimelineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableViewController.swift; sourceTree = "<group>"; };
+		DB50E0151E73F9B500203C7B /* UIColor+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Utility.swift"; sourceTree = "<group>"; };
 		ECCD3C6FD89FBA5DE77E1302 /* Pods_HackathonForBooking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackathonForBooking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -69,6 +85,9 @@
 		539794321E727D4000B12B96 /* HackathonForBooking */ = {
 			isa = PBXGroup;
 			children = (
+				DB50E01C1E73F9BA00203C7B /* Utility */,
+				DB50E00F1E73F99900203C7B /* TaskTableViewController */,
+				DB50E00A1E73F97500203C7B /* StartViewController */,
 				539794331E727D4000B12B96 /* AppDelegate.swift */,
 				539794351E727D4000B12B96 /* ViewController.swift */,
 				539794371E727D4000B12B96 /* Main.storyboard */,
@@ -98,6 +117,35 @@
 				C17165545DD4C03D615A2B70 /* Pods-HackathonForBooking.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DB50E00A1E73F97500203C7B /* StartViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB50E00B1E73F99500203C7B /* Start.storyboard */,
+				DB50E00C1E73F99500203C7B /* StartViewController.swift */,
+			);
+			name = StartViewController;
+			sourceTree = "<group>";
+		};
+		DB50E00F1E73F99900203C7B /* TaskTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB50E0101E73F9B500203C7B /* Timeline.swift */,
+				DB50E0111E73F9B500203C7B /* TimelinePoint.swift */,
+				DB50E0121E73F9B500203C7B /* TimelineTableViewCell.swift */,
+				DB50E0131E73F9B500203C7B /* TimelineTableViewCell.xib */,
+				DB50E0141E73F9B500203C7B /* TimelineTableViewController.swift */,
+			);
+			name = TaskTableViewController;
+			sourceTree = "<group>";
+		};
+		DB50E01C1E73F9BA00203C7B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				DB50E0151E73F9B500203C7B /* UIColor+Utility.swift */,
+			);
+			name = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +183,6 @@
 				TargetAttributes = {
 					5397942F1E727D4000B12B96 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 527ZM29L2F;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -164,6 +211,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5397943E1E727D4000B12B96 /* LaunchScreen.storyboard in Resources */,
+				DB50E00D1E73F99500203C7B /* Start.storyboard in Resources */,
+				DB50E0191E73F9B500203C7B /* TimelineTableViewCell.xib in Resources */,
 				5397943B1E727D4000B12B96 /* Assets.xcassets in Resources */,
 				539794391E727D4000B12B96 /* Main.storyboard in Resources */,
 			);
@@ -224,9 +273,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB50E0161E73F9B500203C7B /* Timeline.swift in Sources */,
 				5397944C1E73E8F600B12B96 /* TaskSingleTon.swift in Sources */,
+				DB50E0181E73F9B500203C7B /* TimelineTableViewCell.swift in Sources */,
+				DB50E00E1E73F99500203C7B /* StartViewController.swift in Sources */,
 				539794361E727D4000B12B96 /* ViewController.swift in Sources */,
 				539794481E73CFB800B12B96 /* TaskObject.swift in Sources */,
+				DB50E0171E73F9B500203C7B /* TimelinePoint.swift in Sources */,
+				DB50E01A1E73F9B500203C7B /* TimelineTableViewController.swift in Sources */,
+				DB50E01B1E73F9B500203C7B /* UIColor+Utility.swift in Sources */,
 				5397944A1E73D8B400B12B96 /* TaskMaker.swift in Sources */,
 				539794461E73C27500B12B96 /* TaskPhotoVC.swift in Sources */,
 				539794341E727D4000B12B96 /* AppDelegate.swift in Sources */,
@@ -351,7 +406,7 @@
 			baseConfigurationReference = A24FAD01D17A7A3D43EACCCC /* Pods-HackathonForBooking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 527ZM29L2F;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = HackathonForBooking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andyyang.HackathonForBooking;
@@ -365,7 +420,7 @@
 			baseConfigurationReference = C17165545DD4C03D615A2B70 /* Pods-HackathonForBooking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 527ZM29L2F;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = HackathonForBooking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andyyang.HackathonForBooking;
