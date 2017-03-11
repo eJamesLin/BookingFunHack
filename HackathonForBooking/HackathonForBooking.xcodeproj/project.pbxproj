@@ -13,6 +13,8 @@
 		5397943B1E727D4000B12B96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5397943A1E727D4000B12B96 /* Assets.xcassets */; };
 		5397943E1E727D4000B12B96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5397943C1E727D4000B12B96 /* LaunchScreen.storyboard */; };
 		539794461E73C27500B12B96 /* TaskPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539794451E73C27500B12B96 /* TaskPhotoVC.swift */; };
+		539794481E73CFB800B12B96 /* TaskObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539794471E73CFB800B12B96 /* TaskObject.swift */; };
+		5397944A1E73D8B400B12B96 /* TaskMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539794491E73D8B400B12B96 /* TaskMaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		5397943D1E727D4000B12B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5397943F1E727D4000B12B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		539794451E73C27500B12B96 /* TaskPhotoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskPhotoVC.swift; sourceTree = "<group>"; };
+		539794471E73CFB800B12B96 /* TaskObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskObject.swift; sourceTree = "<group>"; };
+		539794491E73D8B400B12B96 /* TaskMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskMaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				539794351E727D4000B12B96 /* ViewController.swift */,
 				539794371E727D4000B12B96 /* Main.storyboard */,
 				539794451E73C27500B12B96 /* TaskPhotoVC.swift */,
+				539794471E73CFB800B12B96 /* TaskObject.swift */,
+				539794491E73D8B400B12B96 /* TaskMaker.swift */,
 				5397943A1E727D4000B12B96 /* Assets.xcassets */,
 				5397943C1E727D4000B12B96 /* LaunchScreen.storyboard */,
 				5397943F1E727D4000B12B96 /* Info.plist */,
@@ -141,6 +147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				539794361E727D4000B12B96 /* ViewController.swift in Sources */,
+				539794481E73CFB800B12B96 /* TaskObject.swift in Sources */,
+				5397944A1E73D8B400B12B96 /* TaskMaker.swift in Sources */,
 				539794461E73C27500B12B96 /* TaskPhotoVC.swift in Sources */,
 				539794341E727D4000B12B96 /* AppDelegate.swift in Sources */,
 			);

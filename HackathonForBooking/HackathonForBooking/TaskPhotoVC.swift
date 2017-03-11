@@ -17,14 +17,25 @@ class TaskPhotoVC: UIViewController {
     @IBOutlet weak var imgTask: UIImageView!
     
     var isNew = false
+    var task = TaskMaker().createTask()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.startUI()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: - Private Methods
+    fileprivate func startUI() {
+        self.taskTitle.text = self.task.taskTitle
+        self.taskContent.text = self.task.taskContent
     }
     
     @IBAction func takePhoto(_ sender: Any) {
@@ -72,8 +83,9 @@ class TaskPhotoVC: UIViewController {
     }
     
     @IBAction func finish(_ sender: Any) {
+        self.task.taskPhoto = self.imgTask.image
+        self.task.saveTask(task: self.task)
     }
-    
 }
 
 extension TaskPhotoVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
