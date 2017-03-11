@@ -15,6 +15,7 @@
 		539794461E73C27500B12B96 /* TaskPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539794451E73C27500B12B96 /* TaskPhotoVC.swift */; };
 		539794481E73CFB800B12B96 /* TaskObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539794471E73CFB800B12B96 /* TaskObject.swift */; };
 		5397944A1E73D8B400B12B96 /* TaskMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539794491E73D8B400B12B96 /* TaskMaker.swift */; };
+		E1D6D348CFB895C5629E9C6A /* Pods_HackathonForBooking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCD3C6FD89FBA5DE77E1302 /* Pods_HackathonForBooking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		539794451E73C27500B12B96 /* TaskPhotoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskPhotoVC.swift; sourceTree = "<group>"; };
 		539794471E73CFB800B12B96 /* TaskObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskObject.swift; sourceTree = "<group>"; };
 		539794491E73D8B400B12B96 /* TaskMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskMaker.swift; sourceTree = "<group>"; };
+		A24FAD01D17A7A3D43EACCCC /* Pods-HackathonForBooking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonForBooking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackathonForBooking/Pods-HackathonForBooking.debug.xcconfig"; sourceTree = "<group>"; };
+		C17165545DD4C03D615A2B70 /* Pods-HackathonForBooking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonForBooking.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackathonForBooking/Pods-HackathonForBooking.release.xcconfig"; sourceTree = "<group>"; };
+		ECCD3C6FD89FBA5DE77E1302 /* Pods_HackathonForBooking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackathonForBooking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1D6D348CFB895C5629E9C6A /* Pods_HackathonForBooking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				539794321E727D4000B12B96 /* HackathonForBooking */,
 				539794311E727D4000B12B96 /* Products */,
+				9E1E4C81CE2D9ECEAAE52023 /* Pods */,
+				5B50EA6BA92670DFF9AED438 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +80,23 @@
 			path = HackathonForBooking;
 			sourceTree = "<group>";
 		};
+		5B50EA6BA92670DFF9AED438 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECCD3C6FD89FBA5DE77E1302 /* Pods_HackathonForBooking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E1E4C81CE2D9ECEAAE52023 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A24FAD01D17A7A3D43EACCCC /* Pods-HackathonForBooking.debug.xcconfig */,
+				C17165545DD4C03D615A2B70 /* Pods-HackathonForBooking.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 539794421E727D4000B12B96 /* Build configuration list for PBXNativeTarget "HackathonForBooking" */;
 			buildPhases = (
+				23C0A215BE1DF56BF35111FB /* [CP] Check Pods Manifest.lock */,
 				5397942C1E727D4000B12B96 /* Sources */,
 				5397942D1E727D4000B12B96 /* Frameworks */,
 				5397942E1E727D4000B12B96 /* Resources */,
+				F855DBCF23F6902BF763138E /* [CP] Embed Pods Frameworks */,
+				D2969D794828907B746505F0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,6 +167,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23C0A215BE1DF56BF35111FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D2969D794828907B746505F0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackathonForBooking/Pods-HackathonForBooking-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F855DBCF23F6902BF763138E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackathonForBooking/Pods-HackathonForBooking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5397942C1E727D4000B12B96 /* Sources */ = {
@@ -269,6 +344,7 @@
 		};
 		539794431E727D4000B12B96 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A24FAD01D17A7A3D43EACCCC /* Pods-HackathonForBooking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 527ZM29L2F;
@@ -282,6 +358,7 @@
 		};
 		539794441E727D4000B12B96 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C17165545DD4C03D615A2B70 /* Pods-HackathonForBooking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 527ZM29L2F;
