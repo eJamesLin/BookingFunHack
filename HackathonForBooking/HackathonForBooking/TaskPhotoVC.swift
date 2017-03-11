@@ -17,7 +17,7 @@ class TaskPhotoVC: UIViewController {
     @IBOutlet weak var imgTask: UIImageView!
     
     var isNew = false
-    var task = TaskMaker().createTask()
+    var task: TaskObject?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +34,8 @@ class TaskPhotoVC: UIViewController {
     
     //MARK: - Private Methods
     fileprivate func startUI() {
-        self.taskTitle.text = self.task.taskTitle
-        self.taskContent.text = self.task.taskContent
+        self.taskTitle.text = self.task?.taskTitle
+        self.taskContent.text = self.task?.taskContent
     }
     
     @IBAction func takePhoto(_ sender: Any) {
@@ -83,8 +83,8 @@ class TaskPhotoVC: UIViewController {
     }
     
     @IBAction func finish(_ sender: Any) {
-        self.task.taskPhoto = self.imgTask.image
-        self.task.saveTask(task: self.task)
+        self.task?.taskPhoto = self.imgTask.image
+        self.task?.saveTask(task: self.task!)
     }
 }
 

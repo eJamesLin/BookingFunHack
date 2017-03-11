@@ -9,5 +9,10 @@
 import UIKit
 
 class TaskSingleTon: NSObject {
-
+    static let sharedInstance = TaskSingleTon()
+    
+    //task number
+    var maxTaskCount = 0
+    
+    var taskCategory: String?
 }

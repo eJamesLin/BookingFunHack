@@ -15,6 +15,7 @@
 		539794461E73C27500B12B96 /* TaskPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539794451E73C27500B12B96 /* TaskPhotoVC.swift */; };
 		539794481E73CFB800B12B96 /* TaskObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539794471E73CFB800B12B96 /* TaskObject.swift */; };
 		5397944A1E73D8B400B12B96 /* TaskMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539794491E73D8B400B12B96 /* TaskMaker.swift */; };
+		5397944C1E73E8F600B12B96 /* TaskSingleTon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5397944B1E73E8F600B12B96 /* TaskSingleTon.swift */; };
 		E1D6D348CFB895C5629E9C6A /* Pods_HackathonForBooking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCD3C6FD89FBA5DE77E1302 /* Pods_HackathonForBooking.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		539794451E73C27500B12B96 /* TaskPhotoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskPhotoVC.swift; sourceTree = "<group>"; };
 		539794471E73CFB800B12B96 /* TaskObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskObject.swift; sourceTree = "<group>"; };
 		539794491E73D8B400B12B96 /* TaskMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskMaker.swift; sourceTree = "<group>"; };
+		5397944B1E73E8F600B12B96 /* TaskSingleTon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSingleTon.swift; sourceTree = "<group>"; };
 		A24FAD01D17A7A3D43EACCCC /* Pods-HackathonForBooking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonForBooking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackathonForBooking/Pods-HackathonForBooking.debug.xcconfig"; sourceTree = "<group>"; };
 		C17165545DD4C03D615A2B70 /* Pods-HackathonForBooking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonForBooking.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackathonForBooking/Pods-HackathonForBooking.release.xcconfig"; sourceTree = "<group>"; };
 		ECCD3C6FD89FBA5DE77E1302 /* Pods_HackathonForBooking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackathonForBooking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +74,7 @@
 				539794371E727D4000B12B96 /* Main.storyboard */,
 				539794451E73C27500B12B96 /* TaskPhotoVC.swift */,
 				539794471E73CFB800B12B96 /* TaskObject.swift */,
+				5397944B1E73E8F600B12B96 /* TaskSingleTon.swift */,
 				539794491E73D8B400B12B96 /* TaskMaker.swift */,
 				5397943A1E727D4000B12B96 /* Assets.xcassets */,
 				5397943C1E727D4000B12B96 /* LaunchScreen.storyboard */,
@@ -181,7 +184,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D2969D794828907B746505F0 /* [CP] Copy Pods Resources */ = {
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5397944C1E73E8F600B12B96 /* TaskSingleTon.swift in Sources */,
 				539794361E727D4000B12B96 /* ViewController.swift in Sources */,
 				539794481E73CFB800B12B96 /* TaskObject.swift in Sources */,
 				5397944A1E73D8B400B12B96 /* TaskMaker.swift in Sources */,

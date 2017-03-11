@@ -11,10 +11,12 @@ import UIKit
 class TaskObject: NSObject, NSCoding {
     
     //Properties
+    var taskCategory = TaskSingleTon.sharedInstance.taskCategory
     var taskID = 0
     var taskTitle: String?
     var taskContent: String?
     var taskPhoto: UIImage?
+    var taskFinished = false
     
     let userDefault = UserDefaults.standard
     
@@ -51,22 +53,38 @@ class TaskObject: NSObject, NSCoding {
     //MARK: - Private Methods
     func saveTask(task: TaskObject) {
         
+        //check if the user finished the task
+        if (task.taskPhoto != nil) {
+            self.taskFinished = true
+        }
+        
         var aryTask = [Data]()
         
-        if self.userDefault.array(forKey: "Task")?.count != nil {
-            aryTask = self.userDefault.array(forKey: "Tasks") as! [Data]
+        if self.userDefault.array(forKey: "Task_\(self.taskCategory)")?.count != nil {
+            aryTask = self.userDefault.array(forKey: "Tasks_\(self.taskCategory)") as! [Data]
         }
         
         let savedData = NSKeyedArchiver.archivedData(withRootObject: task)
         aryTask.append(savedData)
         
-        self.userDefault.set(aryTask, forKey: "Tasks")
+        self.userDefault.set(aryTask, forKey: "Tasks_\(self.taskCategory)")
         self.userDefault.synchronize()
+    }
+    
+    func getTasks() -> [TaskObject] {
+        var aryTasks = [TaskObject]()
+        
+        for task in self.userDefault.array(forKey: "Task_\(self.taskCategory)")! {
+            let unarchiveTask = NSKeyedUnarchiver.unarchiveObject(with: task as! Data)
+            aryTasks.append(unarchiveTask as! TaskObject)
+        }
+        
+        return aryTasks
     }
     
     func getTaskID() -> Int {
         
-        var id = self.userDefault.array(forKey: "Tasks")?.count
+        var id = self.userDefault.array(forKey: "Tasks_\(self.taskCategory)")?.count
         
         if id == nil {
             id = 0
