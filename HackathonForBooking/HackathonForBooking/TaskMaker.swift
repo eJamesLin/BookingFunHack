@@ -10,18 +10,9 @@ import UIKit
 
 class TaskMaker: NSObject {
     func createTask() -> [TaskObject] {
-        var arr: [TaskObject] = []
-
-        for num in stride(from: 1, through: TaskSingleTon.sharedInstance.maxTaskCount, by: 1) {
-            let task = TaskObject()
-            task.taskCategory = TaskSingleTon.sharedInstance.taskCategory
-            task.taskID = num
-            task.taskTitle = "Task\(task.taskID)"
-            task.taskContent = "TaskContent\(task.taskID)"
-
-            arr.append(task)
-        }
-        
+        let t1 = TaskObject(taskID: 1, title: "吃掉倆倆", content: "至倆倆號購買一份餐點並與之合照，完成這一關。")
+        let t2 = TaskObject(taskID: 2, title: "頂尖 101", content: "至台北101拍攝一張手指頂住101樓頂之合照。")
+        let arr = [t1, t2]
         return arr
     }
 }

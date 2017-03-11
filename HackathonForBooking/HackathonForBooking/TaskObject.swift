@@ -21,8 +21,11 @@ class TaskObject: NSObject, NSCoding {
     let userDefault = UserDefaults.standard
     
     //MARK: - NSCoding Delegate
-    override init() {
+    init(taskID: Int, title: String?, content: String?) {
         super.init()
+        self.taskID = taskID
+        taskTitle = title
+        taskContent = content
     }
     
     required init(coder aDecoder: NSCoder) {
