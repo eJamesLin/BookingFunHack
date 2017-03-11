@@ -67,14 +67,21 @@ class TaskObject: NSObject, NSCoding {
         let savedData = NSKeyedArchiver.archivedData(withRootObject: task)
         aryTask.append(savedData)
         
-        self.userDefault.set(aryTask, forKey: "Tasks_\(self.taskCategory)")
-        self.userDefault.synchronize()
+        if let category = self.taskCategory {
+            self.userDefault.set(aryTask, forKey: "Tasks_\(category)")
+            self.userDefault.synchronize()
+        }
     }
     
     func getTasks() -> [TaskObject] {
         var aryTasks = [TaskObject]()
         
-        for task in self.userDefault.array(forKey: "Task_\(self.taskCategory)")! {
+        guard let category = self.taskCategory,
+            let arr = self.userDefault.array(forKey: "Task_\(category)") else {
+            return []
+        }
+        
+        for task in arr {
             let unarchiveTask = NSKeyedUnarchiver.unarchiveObject(with: task as! Data)
             aryTasks.append(unarchiveTask as! TaskObject)
         }

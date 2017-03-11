@@ -12,6 +12,7 @@ class TaskMaker: NSObject {
     func createTask() {
         for _ in 1...TaskSingleTon.sharedInstance.maxTaskCount {
             let task = TaskObject()
+            task.taskCategory = TaskSingleTon.sharedInstance.taskCategory
             task.taskID = task.getTaskID()
             task.taskTitle = "Task\(task.taskID)"
             task.taskContent = "TaskContent\(task.taskID)"

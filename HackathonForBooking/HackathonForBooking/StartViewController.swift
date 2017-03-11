@@ -16,6 +16,10 @@ class StartViewController: UIViewController {
 
     @IBAction func startSolvingTask(_ sender: Any) {
         let vc = TimelineTableViewController()
+        TaskSingleTon.sharedInstance.maxTaskCount = 5
+        
+        TaskSingleTon.sharedInstance.taskCategory = "Taipei"
+        TaskMaker().createTask()
         navigationController?.pushViewController(vc, animated: true)
     }
 }

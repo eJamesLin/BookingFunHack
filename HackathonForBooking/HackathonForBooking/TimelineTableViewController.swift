@@ -21,6 +21,8 @@ class TimelineTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -91,7 +93,8 @@ class TimelineTableViewController: UITableViewController {
         }
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "TaskPhotoVC")
+        let vc = storyboard.instantiateViewController(withIdentifier: "TaskPhotoVC") as! TaskPhotoVC
+        //vc.task = TaskObject().getTasks()[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
 
