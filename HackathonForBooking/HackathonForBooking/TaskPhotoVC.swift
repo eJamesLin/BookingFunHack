@@ -84,7 +84,12 @@ class TaskPhotoVC: UIViewController {
     
     @IBAction func finish(_ sender: Any) {
         self.task?.taskPhoto = self.imgTask.image
-        self.task?.saveTask(task: self.task!)
+
+        if (self.task?.taskPhoto != nil) {
+            self.task?.taskFinished = true
+        }
+
+        TaskSingleTon.sharedInstance.saveTasks()
     }
 }
 

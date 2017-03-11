@@ -44,60 +44,40 @@ class TimelineTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return data.count
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        guard let sectionData = data[section] else {
-            return 0
-        }
-        return sectionData.count
+        return TaskSingleTon.sharedInstance.allTasks.count
     }
-    
-//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return "Day " + String(describing: section + 1)
-//    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineTableViewCell", for: indexPath) as! TimelineTableViewCell
 
-        // Configure the cell...
-        guard let sectionData = data[indexPath.section] else {
-            return cell
-        }
-        
-        let (timelineBackColor, taskOrderString, title, _, thumbnail, detail) = sectionData[indexPath.row]
+        let task = TaskSingleTon.sharedInstance.allTasks[indexPath.row]
+
+        //let (timelineBackColor, taskOrderString, title, _, thumbnail, detail) = sectionData[indexPath.row]
         var timelineFrontColor = UIColor.clear
-        if (indexPath.row > 0) {
-            timelineFrontColor = sectionData[indexPath.row - 1].0
-        }
+//        if (indexPath.row > 0) {
+//            timelineFrontColor = sectionData[indexPath.row - 1].0
+//        }
         cell.timelinePoint = TimelinePoint(diameter: 20, color: UIColor.themeBlue(), filled: true)
-        cell.timeline.frontColor = timelineFrontColor
-        cell.timeline.backColor = timelineBackColor
-        cell.titleLabel.text = taskOrderString
-        cell.taskNameLabel.text = title
-        cell.descriptionLabel.text = detail
-        
-        if let thumbnail = thumbnail {
-            cell.thumbnailImageView.image = UIImage(named: thumbnail)
-        }
-   
+//        cell.timeline.frontColor = timelineFrontColor
+//        cell.timeline.backColor = timelineBackColor
+        cell.titleLabel.text = "Task \(task.taskID)"
+        cell.taskNameLabel.text = task.taskTitle
+        cell.descriptionLabel.text = task.taskContent
+        cell.thumbnailImageView.image = task.taskPhoto
+
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let sectionData = data[indexPath.section] else {
-            return
-        }
-        
+
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "TaskPhotoVC") as! TaskPhotoVC
-        if let category = TaskSingleTon.sharedInstance.taskCategory {
-            vc.task = TaskObject.getTasks(category: category)[indexPath.row]
-            navigationController?.pushViewController(vc, animated: true)
-        }
+        vc.task = TaskSingleTon.sharedInstance.allTasks[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     /*

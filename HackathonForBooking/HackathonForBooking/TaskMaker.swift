@@ -9,14 +9,19 @@
 import UIKit
 
 class TaskMaker: NSObject {
-    func createTask() {
-        for _ in 1...TaskSingleTon.sharedInstance.maxTaskCount {
+    func createTask() -> [TaskObject] {
+        var arr: [TaskObject] = []
+
+        for num in stride(from: 1, through: TaskSingleTon.sharedInstance.maxTaskCount, by: 1) {
             let task = TaskObject()
             task.taskCategory = TaskSingleTon.sharedInstance.taskCategory
-            task.taskID = task.getTaskID()
+            task.taskID = num
             task.taskTitle = "Task\(task.taskID)"
             task.taskContent = "TaskContent\(task.taskID)"
-            task.saveTask(task: task)
+
+            arr.append(task)
         }
+        
+        return arr
     }
 }

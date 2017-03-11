@@ -16,10 +16,20 @@ class StartViewController: UIViewController {
 
     @IBAction func startSolvingTask(_ sender: Any) {
         let vc = TimelineTableViewController()
-        TaskSingleTon.sharedInstance.maxTaskCount = 5
-        
+
+        // temp data, will get from user actions
         TaskSingleTon.sharedInstance.taskCategory = "Taipei"
-        TaskMaker().createTask()
+
+        //
+        if let tasks = TaskSingleTon.sharedInstance.getTasksFromDisk() {
+            TaskSingleTon.sharedInstance.allTasks = tasks
+        } else {
+            TaskSingleTon.sharedInstance.maxTaskCount = 5
+            TaskSingleTon.sharedInstance.allTasks = TaskMaker().createTask()
+        }
+
+        TaskSingleTon.sharedInstance.saveTasks()
+
         navigationController?.pushViewController(vc, animated: true)
     }
 }

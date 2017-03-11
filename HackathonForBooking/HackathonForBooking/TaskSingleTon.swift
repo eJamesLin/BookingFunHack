@@ -15,4 +15,33 @@ class TaskSingleTon: NSObject {
     var maxTaskCount = 0
     
     var taskCategory: String?
+
+    lazy var allTasks: [TaskObject] = []
+
+    func getTasksFromDisk() -> [TaskObject]? {
+
+        guard let category = taskCategory else { return nil }
+
+        guard let data = UserDefaults.standard.value(forKey: keyForCategory(category)) as? Data else { return nil }
+
+        let unarchiveTask = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data as NSData) as? [TaskObject]
+
+        return unarchiveTask ?? nil
+    }
+
+    func saveTasks() {
+        
+        if let category = taskCategory {
+
+            let savedData = NSKeyedArchiver.archivedData(withRootObject: allTasks)
+
+            UserDefaults.standard.set(savedData, forKey: keyForCategory(category))
+            UserDefaults.standard.synchronize()
+        }
+    }
+
+    func keyForCategory(_ category: String) -> String {
+        return "Task_\(category)"
+    }
+
 }
