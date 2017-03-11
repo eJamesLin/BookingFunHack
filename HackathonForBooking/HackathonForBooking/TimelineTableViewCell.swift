@@ -2,33 +2,63 @@
 //  TimelineTableViewCell.swift
 //  TimelineTableViewCell
 //
-//  Created by Zheng-Xiang Ke on 2016/10/20.
-//  Copyright © 2016年 Zheng-Xiang Ke. All rights reserved.
+//  Created by CJ Lin on 2017/3/11.
+//  Copyright © 2017年 CJ Lin. All rights reserved.
 //
 
 import UIKit
 
 
-open class TimelineTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak open var titleLabel: UILabel!
-    @IBOutlet weak open var taskNameLabel: UILabel!
-    @IBOutlet weak open var descriptionLabel: UILabel!
+class TimelineTableViewCell: UITableViewCell {
 
-    @IBOutlet weak open var thumbnailImageView: UIImageView!
+    @IBOutlet weak var statusView: UIView!
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var statusLeftSeperator: UIView!
+    @IBOutlet weak var statusRightSeperator: UIView!
+
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var taskNameLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+
+    @IBOutlet weak var thumbnailImageView: UIImageView!
     
-    open var timelinePoint = TimelinePoint() {
+    var timelinePoint = TimelinePoint() {
         didSet {
             self.setNeedsDisplay()
         }
     }
-    open var timeline = Timeline() {
+    var timeline = Timeline() {
         didSet {
             self.setNeedsDisplay()
         }
     }
 
-    open var bubbleRadius: CGFloat = 2.0 {
+    var statusFinished: Bool = false {
+        didSet {
+            if statusFinished {
+                statusLabel.text = "完成"
+                statusLabel.textColor = UIColor.themeBlue()
+                statusLeftSeperator.backgroundColor = UIColor.themeBlue()
+                statusRightSeperator.backgroundColor = UIColor.themeBlue()
+            } else {
+                statusLabel.text = "未完成"
+                statusLabel.textColor = UIColor.themeGray()
+                statusLeftSeperator.backgroundColor = UIColor.themeGray()
+                statusRightSeperator.backgroundColor = UIColor.themeGray()
+            }
+        }
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        titleLabel.text = nil
+        taskNameLabel.text = nil
+        descriptionLabel.text = nil
+        thumbnailImageView.image = nil
+        statusView.isHidden = false
+    }
+
+    var bubbleRadius: CGFloat = 2.0 {
         didSet {
             if (bubbleRadius < 0.0) {
                 bubbleRadius = 0.0
@@ -40,31 +70,19 @@ open class TimelineTableViewCell: UITableViewCell {
         }
     }
     
-    open var bubbleColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1.0)
-    
-    override open func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    var bubbleColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1.0)
 
-    override open func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
-    override open func draw(_ rect: CGRect) {
-        for layer in self.contentView.layer.sublayers! {
-            if layer is CAShapeLayer {
-                layer.removeFromSuperlayer()
+    override func draw(_ rect: CGRect) {
+        if let sublayers = self.contentView.layer.sublayers {
+            for layer in sublayers {
+                if layer is CAShapeLayer {
+                    layer.removeFromSuperlayer()
+                }
             }
         }
         
-        
-        //titleLabel.sizeToFit()
-        //descriptionLabel.sizeToFit()
-        
-        timelinePoint.position = CGPoint(x: timeline.leftMargin + timeline.width / 2, y: titleLabel.frame.origin.y + titleLabel.intrinsicContentSize.height / 2 - timelinePoint.diameter / 2)
+        timelinePoint.position = CGPoint(x: timeline.leftMargin + timeline.width / 2,
+                                         y: rect.size.height - timelinePoint.diameter - 5)
 
         timeline.start = CGPoint(x: timelinePoint.position.x + timelinePoint.diameter / 2, y: 0)
         timeline.middle = CGPoint(x: timeline.start.x, y: timelinePoint.position.y)
@@ -72,31 +90,44 @@ open class TimelineTableViewCell: UITableViewCell {
         timeline.draw(view: self.contentView)
         
         timelinePoint.draw(view: self.contentView)
-        
-//        if let title = titleLabel.text, !title.isEmpty {
-//            drawBubble()
-//        }
+    }
+}
+
+// MARK: -
+
+extension TimelineTableViewCell {
+
+    func setupAsDummyCell() {
+        statusView.isHidden = true
+        titleLabel.text = nil
+        taskNameLabel.text = nil
+        descriptionLabel.text = nil
+        thumbnailImageView.image = nil
     }
     
-    fileprivate func drawBubble() {
-        let offset: CGFloat = 15
-        let bubbleRect = CGRect(
-            x: titleLabel.frame.origin.x - offset / 2,
-            y: titleLabel.frame.origin.y - offset / 2,
-            width: titleLabel.intrinsicContentSize.width + offset,
-            height: titleLabel.intrinsicContentSize.height + offset)
-        
-        let path = UIBezierPath(roundedRect: bubbleRect, cornerRadius: bubbleRadius)
-        let startPoint = CGPoint(x: bubbleRect.origin.x, y: bubbleRect.origin.y + bubbleRect.height / 2 - 8)
-        path.move(to: startPoint)
-        path.addLine(to: startPoint)
-        path.addLine(to: CGPoint(x: bubbleRect.origin.x - 8, y: bubbleRect.origin.y + bubbleRect.height / 2))
-        path.addLine(to: CGPoint(x: bubbleRect.origin.x, y: bubbleRect.origin.y + bubbleRect.height / 2 + 8))
+    func setupNotDisplaying() {
+        titleLabel.text = nil
+        taskNameLabel.text = nil
+        descriptionLabel.text = nil
+        thumbnailImageView.image = nil
 
-        let shapeLayer = CAShapeLayer()
-        shapeLayer.path = path.cgPath
-        shapeLayer.fillColor = bubbleColor.cgColor
-        
-        self.contentView.layer.insertSublayer(shapeLayer, below: titleLabel.layer)
+        timeline.frontColor = UIColor.themeGray()
+        timeline.backColor = UIColor.themeGray()
+        timelinePoint.color = UIColor.themeGray()
+
+        statusFinished = false
+    }
+
+    func setupWithTask(_ task: TaskObject) {
+        titleLabel.text = "Task \(task.taskID)"
+        taskNameLabel.text = task.taskTitle
+        descriptionLabel.text = task.taskContent
+        thumbnailImageView.image = task.taskPhoto
+
+        let color = task.taskFinished ?UIColor.themeBlue() :UIColor.themeGray()
+        timeline.backColor = color
+        timelinePoint.color = color
+
+        statusFinished = task.taskFinished
     }
 }

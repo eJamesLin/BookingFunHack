@@ -2,8 +2,8 @@
 //  TimelinePoint.swift
 //  TimelineTableViewCell
 //
-//  Created by Zheng-Xiang Ke on 2016/10/20.
-//  Copyright © 2016年 Zheng-Xiang Ke. All rights reserved.
+//  Created by CJ Lin on 2017/3/11.
+//  Copyright © 2017年 CJ Lin. All rights reserved.
 //
 
 import Foundation
@@ -32,34 +32,32 @@ public struct TimelinePoint {
     
     public var color = UIColor.black
     
-    public var isFilled = false
-    
     internal var position = CGPoint(x: 0, y: 0)
     
-    public init(diameter: CGFloat, lineWidth: CGFloat, color: UIColor, filled: Bool) {
+    public init(diameter: CGFloat, lineWidth: CGFloat, color: UIColor) {
         self.diameter = diameter
         self.lineWidth = lineWidth
         self.color = color
-        self.isFilled = filled
+    }
+
+    public init(diameter: CGFloat) {
+        self.init(diameter: diameter, lineWidth: 2.0, color: UIColor.themeBlue())
+    }
+
+    public init(diameter: CGFloat, color: UIColor) {
+        self.init(diameter: diameter, lineWidth: 2.0, color: color)
     }
     
-    public init(diameter: CGFloat, color: UIColor, filled: Bool) {
-        self.init(diameter: diameter, lineWidth: 2.0, color: color, filled: filled)
-    }
-    
-    public init(color: UIColor, filled: Bool) {
-        self.init(diameter: 6.0, lineWidth: 2.0, color: color, filled: filled)
+    public init(color: UIColor) {
+        self.init(diameter: 6.0, lineWidth: 2.0, color: color)
     }
     
     public init() {
-        self.init(diameter: 6.0, lineWidth: 2.0, color: UIColor.black, filled: false)
+        self.init(diameter: 6.0, lineWidth: 2.0, color: UIColor.black)
     }
     
     public func draw(view: UIView) {
         let path = UIBezierPath(ovalIn: CGRect(x: position.x, y: position.y, width: diameter, height: diameter))
-
-
-//        let path = UIBezierPath(arcCenter: position, radius: diameter, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
 
         let bigCircle = CAShapeLayer()
         bigCircle.path = path.cgPath
@@ -73,9 +71,6 @@ public struct TimelinePoint {
         let diff: CGFloat = 10
         let path1 = UIBezierPath(ovalIn: CGRect(x: position.x + diff / 2, y: position.y + diff / 2, width: diameter - diff , height: diameter - diff ))
 
-
-//        let path1 = UIBezierPath(arcCenter: position, radius: diameter - 4, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
-
         let smallCircle = CAShapeLayer()
         smallCircle.path = path1.cgPath
         smallCircle.strokeColor = color.cgColor
@@ -84,16 +79,4 @@ public struct TimelinePoint {
 
         view.layer.addSublayer(smallCircle)
     }
-
-//    public func draw(view: UIView) {
-//        let path = UIBezierPath(ovalIn: CGRect(x: position.x, y: position.y, width: diameter, height: diameter))
-//
-//        let shapeLayer = CAShapeLayer()
-//        shapeLayer.path = path.cgPath
-//        shapeLayer.strokeColor = color.cgColor
-//        shapeLayer.fillColor = isFilled ? color.cgColor : UIColor.white.cgColor
-//        shapeLayer.lineWidth = lineWidth
-//
-//        view.layer.addSublayer(shapeLayer)
-//    }
 }
