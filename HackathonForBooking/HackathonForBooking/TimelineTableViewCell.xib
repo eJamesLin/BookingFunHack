@@ -28,13 +28,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWm-f0-Lj3">
-                        <rect key="frame" x="53" y="112" width="297" height="43"/>
+                        <rect key="frame" x="53" y="87" width="297" height="68"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                         <color key="textColor" red="0.16078431372549018" green="0.1764705882352941" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Rz-dN-Xtc">
-                        <rect key="frame" x="241" y="25" width="109" height="79"/>
+                        <rect key="frame" x="241" y="0.0" width="109" height="79"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="79" id="5Dn-l6-Bj6"/>
                             <constraint firstAttribute="width" constant="109" id="kgE-bL-wlT"/>
@@ -99,7 +99,7 @@
                     <constraint firstItem="LWm-f0-Lj3" firstAttribute="leading" secondItem="4Od-hl-ENS" secondAttribute="leading" id="blg-IW-rEG"/>
                     <constraint firstAttribute="trailing" secondItem="2Rz-dN-Xtc" secondAttribute="trailing" constant="25" id="dUL-gK-bsL"/>
                     <constraint firstItem="RTx-FL-XJW" firstAttribute="top" secondItem="LWm-f0-Lj3" secondAttribute="bottom" id="k6w-3R-fhU"/>
-                    <constraint firstItem="2Rz-dN-Xtc" firstAttribute="top" secondItem="HxZ-h8-hOq" secondAttribute="top" constant="25" id="mv1-rn-wVt"/>
+                    <constraint firstItem="2Rz-dN-Xtc" firstAttribute="top" secondItem="HxZ-h8-hOq" secondAttribute="top" id="mv1-rn-wVt"/>
                     <constraint firstItem="4Od-hl-ENS" firstAttribute="leading" secondItem="HxZ-h8-hOq" secondAttribute="leading" constant="53" id="rTU-Ol-Miu"/>
                     <constraint firstItem="RTx-FL-XJW" firstAttribute="leading" secondItem="HxZ-h8-hOq" secondAttribute="leading" constant="53" id="sqD-Lg-AHv"/>
                     <constraint firstItem="2Rz-dN-Xtc" firstAttribute="leading" secondItem="HLK-LV-SJE" secondAttribute="trailing" constant="10" id="x4t-AS-IZM"/>

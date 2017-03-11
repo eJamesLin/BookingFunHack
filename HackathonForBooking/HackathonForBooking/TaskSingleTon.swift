@@ -44,4 +44,9 @@ class TaskSingleTon: NSObject {
         return "Task_\(category)"
     }
 
+    func didFinishTask(_ task: TaskObject) {
+        if let index = allTasks.index(of: task), (index + 1) < allTasks.count {
+            allTasks[index + 1].shouldBeDisplayed = true
+        }
+    }
 }

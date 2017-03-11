@@ -9,8 +9,7 @@
 import UIKit
 
 class TimelineTableViewController: UITableViewController {
-    
-    fileprivate let identifierFirstDummy = "identifierFirstDummy"
+
     fileprivate let identifier = "TimelineTableViewCell"
 
     override func viewDidLoad() {

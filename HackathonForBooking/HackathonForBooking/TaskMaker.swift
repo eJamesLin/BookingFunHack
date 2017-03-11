@@ -16,6 +16,7 @@ class TaskMaker: NSObject {
         t1.shouldBeDisplayed = true
         let t2 = TaskObject(taskID: 2, title: "頂尖 101", content: "至台北101拍攝一張手指頂住101樓頂之合照。")
         t2.shouldBeDisplayed = true
+        t2.taskFinished = false
         let arr = [first, t1, t2]
         return arr
     }

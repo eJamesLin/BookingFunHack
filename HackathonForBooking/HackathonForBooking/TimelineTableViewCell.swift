@@ -125,6 +125,7 @@ extension TimelineTableViewCell {
         thumbnailImageView.image = task.taskPhoto
 
         let color = task.taskFinished ?UIColor.themeBlue() :UIColor.themeGray()
+        timeline.frontColor = color
         timeline.backColor = color
         timelinePoint.color = color
 
