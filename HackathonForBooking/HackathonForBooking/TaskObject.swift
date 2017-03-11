@@ -59,28 +59,29 @@ class TaskObject: NSObject, NSCoding {
         }
         
         var aryTask = [Data]()
-        
-        if self.userDefault.array(forKey: "Task_\(self.taskCategory)")?.count != nil {
-            aryTask = self.userDefault.array(forKey: "Tasks_\(self.taskCategory)") as! [Data]
-        }
-        
-        let savedData = NSKeyedArchiver.archivedData(withRootObject: task)
-        aryTask.append(savedData)
-        
+
         if let category = self.taskCategory {
-            self.userDefault.set(aryTask, forKey: "Tasks_\(category)")
+
+            if self.userDefault.array(forKey: TaskObject.keyForCategory(category))?.count != nil {
+                aryTask = self.userDefault.array(forKey: TaskObject.keyForCategory(category)) as! [Data]
+            }
+
+            let savedData = NSKeyedArchiver.archivedData(withRootObject: task)
+            aryTask.append(savedData)
+        
+
+            self.userDefault.set(aryTask, forKey: TaskObject.keyForCategory(category))
             self.userDefault.synchronize()
         }
     }
     
-    func getTasks() -> [TaskObject] {
+    class func getTasks(category: String) -> [TaskObject] {
         var aryTasks = [TaskObject]()
-        
-        guard let category = self.taskCategory,
-            let arr = self.userDefault.array(forKey: "Task_\(category)") else {
+
+        guard let arr = UserDefaults.standard.array(forKey: TaskObject.keyForCategory(category)) else {
             return []
         }
-        
+
         for task in arr {
             let unarchiveTask = NSKeyedUnarchiver.unarchiveObject(with: task as! Data)
             aryTasks.append(unarchiveTask as! TaskObject)
@@ -90,13 +91,19 @@ class TaskObject: NSObject, NSCoding {
     }
     
     func getTaskID() -> Int {
-        
-        var id = self.userDefault.array(forKey: "Tasks_\(self.taskCategory)")?.count
+
+        guard let category = self.taskCategory else { return 0 }
+
+        var id = self.userDefault.array(forKey: TaskObject.keyForCategory(category))?.count
         
         if id == nil {
             id = 0
         }
         
         return id! + 1
+    }
+
+    class func keyForCategory(_ category: String) -> String {
+        return "Task_\(category)"
     }
 }
