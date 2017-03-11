@@ -40,11 +40,13 @@ class TimelineTableViewCell: UITableViewCell {
                 statusLabel.textColor = UIColor.themeBlue()
                 statusLeftSeperator.backgroundColor = UIColor.themeBlue()
                 statusRightSeperator.backgroundColor = UIColor.themeBlue()
+                timeline.lineDash = false
             } else {
                 statusLabel.text = "未完成"
                 statusLabel.textColor = UIColor.themeGray()
                 statusLeftSeperator.backgroundColor = UIColor.themeGray()
                 statusRightSeperator.backgroundColor = UIColor.themeGray()
+                timeline.lineDash = true
             }
         }
     }

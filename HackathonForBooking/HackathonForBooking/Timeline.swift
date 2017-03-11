@@ -19,6 +19,8 @@ public struct Timeline {
             }
         }
     }
+
+    var lineDash = false
     
     public var (frontColor, backColor) = (UIColor.black, UIColor.black)
     
@@ -54,6 +56,9 @@ public struct Timeline {
         shapeLayer.path = path.cgPath
         shapeLayer.strokeColor = color.cgColor
         shapeLayer.lineWidth = width
+        if lineDash {
+            shapeLayer.lineDashPattern = [6, 3]
+        }
         
         view.layer.addSublayer(shapeLayer)
     }
