@@ -34,5 +34,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Allow Access Camera  to Finish the Task!</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allow Access Camera Roll to Finish the Task!</string>
 </dict>
 </plist>
