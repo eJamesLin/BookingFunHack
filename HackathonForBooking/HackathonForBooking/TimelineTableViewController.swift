@@ -50,8 +50,8 @@ class TimelineTableViewController: UITableViewController {
         let task = TaskSingleTon.sharedInstance.allTasks[indexPath.row]
         if task.isFirstDummyTask() {
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! TimelineTableViewCell
-            cell.setupAsDummyCell()
             cell.timelinePoint = TimelinePoint(diameter: 20, color: UIColor.themeBlue())
+            cell.setupAsDummyCell()
             return cell
         }
 
