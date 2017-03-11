@@ -22,12 +22,14 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Allow Access Camera  to Finish the Task!</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow Access Location!</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Allow Access Camera Roll to Finish the Task!</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Start</string>
+	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
