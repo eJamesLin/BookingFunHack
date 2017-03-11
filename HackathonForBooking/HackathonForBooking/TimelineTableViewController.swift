@@ -94,8 +94,10 @@ class TimelineTableViewController: UITableViewController {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "TaskPhotoVC") as! TaskPhotoVC
-        //vc.task = TaskObject().getTasks()[indexPath.row]
-        navigationController?.pushViewController(vc, animated: true)
+        if let category = TaskSingleTon.sharedInstance.taskCategory {
+            vc.task = TaskObject.getTasks(category: category)[indexPath.row]
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
     /*
