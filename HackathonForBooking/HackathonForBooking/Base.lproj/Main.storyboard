@@ -29,7 +29,7 @@
         <!--Task PhotoVC-->
         <scene sceneID="1Bh-qL-Po3">
             <objects>
-                <viewController id="UbD-c5-pgZ" customClass="TaskPhotoVC" customModule="HackathonForBooking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TaskPhotoVC" id="UbD-c5-pgZ" customClass="TaskPhotoVC" customModule="HackathonForBooking" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KBU-sQ-Dgf"/>
                         <viewControllerLayoutGuide type="bottom" id="ljV-OD-wcV"/>
