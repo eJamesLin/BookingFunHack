@@ -26,6 +26,7 @@
 		5397944C1E73E8F600B12B96 /* TaskSingleTon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5397944B1E73E8F600B12B96 /* TaskSingleTon.swift */; };
 		5397944E1E73F1EB00B12B96 /* PlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5397944D1E73F1EB00B12B96 /* PlaceVC.swift */; };
 		539794501E73F99D00B12B96 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5397944F1E73F99D00B12B96 /* MapKit.framework */; };
+		539794541E7518DB00B12B96 /* RewardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539794531E7518DB00B12B96 /* RewardVC.swift */; };
 		DB50E00D1E73F99500203C7B /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB50E00B1E73F99500203C7B /* Start.storyboard */; };
 		DB50E00E1E73F99500203C7B /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50E00C1E73F99500203C7B /* StartViewController.swift */; };
 		DB50E0161E73F9B500203C7B /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50E0101E73F9B500203C7B /* Timeline.swift */; };
@@ -63,6 +64,7 @@
 		5397944B1E73E8F600B12B96 /* TaskSingleTon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSingleTon.swift; sourceTree = "<group>"; };
 		5397944D1E73F1EB00B12B96 /* PlaceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceVC.swift; sourceTree = "<group>"; };
 		5397944F1E73F99D00B12B96 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		539794531E7518DB00B12B96 /* RewardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardVC.swift; sourceTree = "<group>"; };
 		A24FAD01D17A7A3D43EACCCC /* Pods-HackathonForBooking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonForBooking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackathonForBooking/Pods-HackathonForBooking.debug.xcconfig"; sourceTree = "<group>"; };
 		C17165545DD4C03D615A2B70 /* Pods-HackathonForBooking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonForBooking.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackathonForBooking/Pods-HackathonForBooking.release.xcconfig"; sourceTree = "<group>"; };
 		DB50E00B1E73F99500203C7B /* Start.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		539794321E727D4000B12B96 /* HackathonForBooking */ = {
 			isa = PBXGroup;
 			children = (
+				539794521E7518BA00B12B96 /* RewardVC */,
 				539794511E7511B300B12B96 /* TaskVC */,
 				22C6DD031E74E11C00443C55 /* CouponViewController */,
 				1431BCD51E74D5A50095FE9E /* GetClueQA */,
@@ -161,6 +164,14 @@
 				539794451E73C27500B12B96 /* TaskPhotoVC.swift */,
 			);
 			name = TaskVC;
+			sourceTree = "<group>";
+		};
+		539794521E7518BA00B12B96 /* RewardVC */ = {
+			isa = PBXGroup;
+			children = (
+				539794531E7518DB00B12B96 /* RewardVC.swift */,
+			);
+			name = RewardVC;
 			sourceTree = "<group>";
 		};
 		5B50EA6BA92670DFF9AED438 /* Frameworks */ = {
@@ -364,6 +375,7 @@
 				DB50E0181E73F9B500203C7B /* TimelineTableViewCell.swift in Sources */,
 				DB50E00E1E73F99500203C7B /* StartViewController.swift in Sources */,
 				1431BCD71E74DA1D0095FE9E /* GetClueQuestion.swift in Sources */,
+				539794541E7518DB00B12B96 /* RewardVC.swift in Sources */,
 				DB50E01E1E745EB300203C7B /* UIViewExtension.swift in Sources */,
 				DB50E0271E74FC7B00203C7B /* ChallengeCollectionViewCell.swift in Sources */,
 				539794481E73CFB800B12B96 /* TaskObject.swift in Sources */,
