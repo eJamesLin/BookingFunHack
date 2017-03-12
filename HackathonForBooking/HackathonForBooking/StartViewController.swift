@@ -76,11 +76,11 @@ class StartViewController: UIViewController {
 
     func setupContentViewElements() {
         let bestLabel = UILabel()
-        bestLabel.text = "精選挑戰"
+        bestLabel.text = "Hot Challenges"
         bestLabel.textColor = UIColor.gray
 
         let nearbyLabel = UILabel()
-        nearbyLabel.text = "與您最近的挑戰"
+        nearbyLabel.text = "Recently Challenges"
         nearbyLabel.textColor = UIColor.gray
 
         contentView.addSubview(bestLabel)

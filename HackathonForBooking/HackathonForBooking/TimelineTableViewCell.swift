@@ -36,13 +36,13 @@ class TimelineTableViewCell: UITableViewCell {
     var statusFinished: Bool = false {
         didSet {
             if statusFinished {
-                statusLabel.text = "完成"
+                statusLabel.text = "Finished"
                 statusLabel.textColor = UIColor.themeBlue()
                 statusLeftSeperator.backgroundColor = UIColor.themeBlue()
                 statusRightSeperator.backgroundColor = UIColor.themeBlue()
                 timeline.lineDash = false
             } else {
-                statusLabel.text = "未完成"
+                statusLabel.text = "Open"
                 statusLabel.textColor = UIColor.themeGray()
                 statusLeftSeperator.backgroundColor = UIColor.themeGray()
                 statusRightSeperator.backgroundColor = UIColor.themeGray()
