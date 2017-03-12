@@ -123,16 +123,8 @@ class StartViewController: UIViewController {
         TaskSingleTon.sharedInstance.taskCategory = "Taipei"
 
         //
-        TaskSingleTon.sharedInstance.getTasksFromDisk(complectionHandler: {(success: Bool?, dataAry: [TaskObject]?) in
-            if success!, let tasks = dataAry, tasks.count > 0 {
-                TaskSingleTon.sharedInstance.allTasks = tasks
-            } else {
-                TaskSingleTon.sharedInstance.allTasks = TaskMaker().createTask()
-            }
-            
-            TaskSingleTon.sharedInstance.saveTasks()
-            _ = self.navigationController?.pushViewController(vc, animated: true)
-        })
+        
+        _ = self.navigationController?.pushViewController(vc, animated: true)
     }
 
     func giveUpTasks() {
