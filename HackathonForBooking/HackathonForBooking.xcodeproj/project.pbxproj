@@ -28,6 +28,8 @@
 		DB50E01B1E73F9B500203C7B /* UIColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50E0151E73F9B500203C7B /* UIColor+Utility.swift */; };
 		DB50E01E1E745EB300203C7B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50E01D1E745EB300203C7B /* UIViewExtension.swift */; };
 		DB50E0241E74E8A000203C7B /* NavigationTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB50E0231E74E8A000203C7B /* NavigationTitleView.xib */; };
+		DB50E0271E74FC7B00203C7B /* ChallengeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50E0251E74FC7B00203C7B /* ChallengeCollectionViewCell.swift */; };
+		DB50E0281E74FC7B00203C7B /* ChallengeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB50E0261E74FC7B00203C7B /* ChallengeCollectionViewCell.xib */; };
 		E1D6D348CFB895C5629E9C6A /* Pods_HackathonForBooking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCD3C6FD89FBA5DE77E1302 /* Pods_HackathonForBooking.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,8 @@
 		DB50E0151E73F9B500203C7B /* UIColor+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Utility.swift"; sourceTree = "<group>"; };
 		DB50E01D1E745EB300203C7B /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		DB50E0231E74E8A000203C7B /* NavigationTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationTitleView.xib; sourceTree = "<group>"; };
+		DB50E0251E74FC7B00203C7B /* ChallengeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeCollectionViewCell.swift; sourceTree = "<group>"; };
+		DB50E0261E74FC7B00203C7B /* ChallengeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeCollectionViewCell.xib; sourceTree = "<group>"; };
 		ECCD3C6FD89FBA5DE77E1302 /* Pods_HackathonForBooking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackathonForBooking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -133,9 +137,8 @@
 		DB50E00A1E73F97500203C7B /* StartViewController */ = {
 			isa = PBXGroup;
 			children = (
-				DB50E00B1E73F99500203C7B /* Start.storyboard */,
 				DB50E00C1E73F99500203C7B /* StartViewController.swift */,
-				DB50E0231E74E8A000203C7B /* NavigationTitleView.xib */,
+				DB50E0291E74FC8800203C7B /* view */,
 			);
 			name = StartViewController;
 			sourceTree = "<group>";
@@ -159,6 +162,17 @@
 				DB50E0151E73F9B500203C7B /* UIColor+Utility.swift */,
 			);
 			name = Utility;
+			sourceTree = "<group>";
+		};
+		DB50E0291E74FC8800203C7B /* view */ = {
+			isa = PBXGroup;
+			children = (
+				DB50E00B1E73F99500203C7B /* Start.storyboard */,
+				DB50E0231E74E8A000203C7B /* NavigationTitleView.xib */,
+				DB50E0251E74FC7B00203C7B /* ChallengeCollectionViewCell.swift */,
+				DB50E0261E74FC7B00203C7B /* ChallengeCollectionViewCell.xib */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +244,7 @@
 			files = (
 				5397943E1E727D4000B12B96 /* LaunchScreen.storyboard in Resources */,
 				DB50E0241E74E8A000203C7B /* NavigationTitleView.xib in Resources */,
+				DB50E0281E74FC7B00203C7B /* ChallengeCollectionViewCell.xib in Resources */,
 				DB50E00D1E73F99500203C7B /* Start.storyboard in Resources */,
 				DB50E0191E73F9B500203C7B /* TimelineTableViewCell.xib in Resources */,
 				5397943B1E727D4000B12B96 /* Assets.xcassets in Resources */,
@@ -298,6 +313,7 @@
 				DB50E00E1E73F99500203C7B /* StartViewController.swift in Sources */,
 				DB50E01E1E745EB300203C7B /* UIViewExtension.swift in Sources */,
 				539794361E727D4000B12B96 /* ViewController.swift in Sources */,
+				DB50E0271E74FC7B00203C7B /* ChallengeCollectionViewCell.swift in Sources */,
 				539794481E73CFB800B12B96 /* TaskObject.swift in Sources */,
 				DB50E0171E73F9B500203C7B /* TimelinePoint.swift in Sources */,
 				DB50E01A1E73F9B500203C7B /* TimelineTableViewController.swift in Sources */,

@@ -21,28 +21,29 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNa-m5-9UP">
-                                <rect key="frame" x="171" y="287" width="32" height="30"/>
-                                <state key="normal" title="start"/>
-                                <connections>
-                                    <action selector="startSolvingTask:" destination="xjt-1f-zJn" eventType="touchUpInside" id="zrC-6E-5zw"/>
-                                </connections>
-                            </button>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nqF-Xh-7eG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hF-DU-saX">
+                                <rect key="frame" x="0.0" y="44" width="375" height="559"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nqF-Xh-7eG" firstAttribute="top" secondItem="81p-Fu-Akx" secondAttribute="bottom" id="0eF-xc-VBQ"/>
-                            <constraint firstItem="yNa-m5-9UP" firstAttribute="centerY" secondItem="5o2-rz-a2l" secondAttribute="centerY" id="8ZV-Q8-uW7"/>
-                            <constraint firstItem="yNa-m5-9UP" firstAttribute="centerX" secondItem="5o2-rz-a2l" secondAttribute="centerX" id="EIO-pV-MuD"/>
+                            <constraint firstItem="3hF-DU-saX" firstAttribute="top" secondItem="nqF-Xh-7eG" secondAttribute="bottom" id="YyZ-Gy-7ef"/>
                             <constraint firstAttribute="trailing" secondItem="nqF-Xh-7eG" secondAttribute="trailing" id="aJ3-yg-bLO"/>
+                            <constraint firstAttribute="trailing" secondItem="3hF-DU-saX" secondAttribute="trailing" id="eYM-WI-KjR"/>
                             <constraint firstItem="nqF-Xh-7eG" firstAttribute="leading" secondItem="5o2-rz-a2l" secondAttribute="leading" id="fe3-h1-mlh"/>
+                            <constraint firstItem="qBc-mr-5RO" firstAttribute="top" secondItem="3hF-DU-saX" secondAttribute="bottom" id="mkL-ey-ugd"/>
+                            <constraint firstItem="3hF-DU-saX" firstAttribute="leading" secondItem="5o2-rz-a2l" secondAttribute="leading" id="zA1-oC-uOs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1Qe-ra-Sta"/>
+                    <connections>
+                        <outlet property="scrollView" destination="3hF-DU-saX" id="xDy-kc-yIQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfU-De-3Ee" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
