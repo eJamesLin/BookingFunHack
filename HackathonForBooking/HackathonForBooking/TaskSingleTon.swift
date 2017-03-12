@@ -14,26 +14,42 @@ class TaskSingleTon: NSObject {
     var taskCategory: String?
 
     lazy var allTasks: [TaskObject] = []
+    
+    func getTasksFromDisk(complectionHandler: @escaping (_ success: Bool, _ dataAry: [TaskObject]) -> Void) {
 
-    func getTasksFromDisk() -> [TaskObject]? {
+        guard let category = taskCategory else {
+            complectionHandler(false, [])
+            return
+        }
 
-        guard let category = taskCategory else { return nil }
+        guard let data = UserDefaults.standard.value(forKey: keyForCategory(category)) as? Data else {
+            complectionHandler(false, [])
+            return
+        }
 
-        guard let data = UserDefaults.standard.value(forKey: keyForCategory(category)) as? Data else { return nil }
+        guard let unarchiveTask = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data as NSData) as? [TaskObject] else {
+            complectionHandler(false, [])
+            return
+        }
 
-        let unarchiveTask = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data as NSData) as? [TaskObject]
-
-        return unarchiveTask ?? nil
+        complectionHandler(true, unarchiveTask!)
+        return
     }
 
     func saveTasks() {
         
-        if let category = taskCategory {
-
-            let savedData = NSKeyedArchiver.archivedData(withRootObject: allTasks)
-
-            UserDefaults.standard.set(savedData, forKey: keyForCategory(category))
-            UserDefaults.standard.synchronize()
+        DispatchQueue.global(qos: .userInitiated).async {
+        
+            if let category = self.taskCategory {
+                let savedData = NSKeyedArchiver.archivedData(withRootObject: self.allTasks)
+                
+                UserDefaults.standard.set(savedData, forKey: self.keyForCategory(category))
+                UserDefaults.standard.synchronize()
+            }
+            
+            DispatchQueue.main.async {
+                //if needed
+            }
         }
     }
 

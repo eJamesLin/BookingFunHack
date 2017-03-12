@@ -91,6 +91,8 @@ class TaskPhotoVC: UIViewController {
         }
 
         TaskSingleTon.sharedInstance.saveTasks()
+        
+        _ = self.navigationController?.popViewController(animated: true)
     }
 }
 
