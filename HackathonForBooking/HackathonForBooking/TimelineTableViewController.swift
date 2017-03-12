@@ -38,8 +38,6 @@ class TimelineTableViewController: UITableViewController {
         self.tableView.tableHeaderView = imageView
 
         //
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Get clue", style: .done, target: self, action: #selector(showClueViewController))
-
         TaskSingleTon.sharedInstance.getTasksFromDisk(complectionHandler: {(success: Bool?, dataAry: [TaskObject]?) in
             DispatchQueue.main.async {
                 if success!, let tasks = dataAry, tasks.count > 0 {

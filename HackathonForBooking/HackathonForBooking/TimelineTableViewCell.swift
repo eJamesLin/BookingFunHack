@@ -56,6 +56,7 @@ class TimelineTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         getClueButton.isHidden = true
+        getClueButton.layer.cornerRadius = 7
     }
 
     override func prepareForReuse() {
