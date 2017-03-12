@@ -14,7 +14,8 @@ class CongratsViewController: UIViewController {
         guard let arr = navigationController?.viewControllers else { return }
 
         for vc in arr {
-            if vc is TimelineTableViewController {
+            if let vc = vc as? TimelineTableViewController {
+                vc.didGotClue()
                 _ = navigationController?.popToViewController(vc, animated: true)
                 break
             }

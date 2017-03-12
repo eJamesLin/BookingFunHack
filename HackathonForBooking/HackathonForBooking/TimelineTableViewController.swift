@@ -38,8 +38,6 @@ class TimelineTableViewController: UITableViewController {
         self.tableView.tableHeaderView = imageView
 
         //
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Get clue", style: .done, target: self, action: #selector(showClueViewController))
-
         TaskSingleTon.sharedInstance.getTasksFromDisk(complectionHandler: {(success: Bool?, dataAry: [TaskObject]?) in
             DispatchQueue.main.async {
                 if success!, let tasks = dataAry, tasks.count > 0 {
@@ -63,6 +61,14 @@ class TimelineTableViewController: UITableViewController {
         let sb = UIStoryboard(name: "GetClue", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "QuestionViewController")
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+
+    func didGotClue() {
+        // temp set all unlock
+        for task in TaskSingleTon.sharedInstance.allTasks {
+            task.isUnlock = true
+        }
+
     }
 
     func toReward() {
@@ -107,6 +113,9 @@ class TimelineTableViewController: UITableViewController {
 
         if task.shouldBeDisplayed == false {
             cell.setupNotDisplaying()
+        } else if task.isUnlock == false {
+            cell.setupWaitForClue()
+            cell.getClueButton.addTarget(self, action: #selector(showClueViewController), for: .touchUpInside)
         } else {
             cell.setupWithTask(task)
         }
