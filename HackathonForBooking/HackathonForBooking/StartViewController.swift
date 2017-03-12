@@ -18,6 +18,7 @@ class StartViewController: UIViewController {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: flowLayout)
+        collectionView.tag = 0
         return collectionView
     }()
 
@@ -25,6 +26,7 @@ class StartViewController: UIViewController {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: flowLayout)
+        collectionView.tag = 1
         return collectionView
     }()
 
@@ -70,11 +72,11 @@ class StartViewController: UIViewController {
     func setupContentViewElements() {
         let bestLabel = UILabel()
         bestLabel.text = "精選挑戰"
-        bestLabel.textColor = UIColor.darkGray
+        bestLabel.textColor = UIColor.gray
 
         let nearbyLabel = UILabel()
         nearbyLabel.text = "與您最近的挑戰"
-        nearbyLabel.textColor = UIColor.darkGray
+        nearbyLabel.textColor = UIColor.gray
 
         contentView.addSubview(bestLabel)
         bestLabel.snp.makeConstraints { (make) -> Void in
@@ -137,6 +139,10 @@ extension StartViewController: UICollectionViewDataSource, UICollectionViewDeleg
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        if let cell = cell as? ChallengeCollectionViewCell {
+            // testcase image
+            cell.imageView.image = UIImage(named: "city\(collectionView.tag)\(indexPath.row)");
+        }
         return cell
     }
 
@@ -145,7 +151,7 @@ extension StartViewController: UICollectionViewDataSource, UICollectionViewDeleg
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 2
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

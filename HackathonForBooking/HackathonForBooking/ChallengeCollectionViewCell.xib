@@ -25,9 +25,19 @@
                             <constraint firstAttribute="width" secondItem="l2s-uw-rVP" secondAttribute="height" id="F7V-lz-Fn8"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWe-Qi-pFw">
+                        <rect key="frame" x="50.5" y="126.5" width="164.5" height="88.5"/>
+                        <string key="text">TAIPEI
+Challenge</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="gWe-Qi-pFw" secondAttribute="trailing" constant="10" id="B3S-Ez-jHA"/>
+                <constraint firstItem="gWe-Qi-pFw" firstAttribute="bottom" secondItem="l2s-uw-rVP" secondAttribute="bottom" constant="-10" id="FlW-5N-FGR"/>
                 <constraint firstAttribute="trailing" secondItem="l2s-uw-rVP" secondAttribute="trailing" id="MiI-9b-QbC"/>
                 <constraint firstItem="l2s-uw-rVP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pbJ-iO-fGf"/>
                 <constraint firstItem="l2s-uw-rVP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="w6u-2S-IGa"/>
