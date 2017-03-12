@@ -22,21 +22,24 @@ class TimelineTableViewController: UITableViewController {
         self.tableView.separatorStyle = .none
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Get clue", style: .done, target: self, action: #selector(showClueViewController))
+
+        TaskSingleTon.sharedInstance.getTasksFromDisk(complectionHandler: {(success: Bool?, dataAry: [TaskObject]?) in
+            DispatchQueue.main.async {
+                if success!, let tasks = dataAry, tasks.count > 0 {
+                    TaskSingleTon.sharedInstance.allTasks = tasks
+                } else {
+                    TaskSingleTon.sharedInstance.allTasks = TaskMaker().createTask()
+                }
+
+                TaskSingleTon.sharedInstance.saveTasks()
+                self.tableView.reloadData()
+            }
+        })
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        TaskSingleTon.sharedInstance.getTasksFromDisk(complectionHandler: {(success: Bool?, dataAry: [TaskObject]?) in
-            if success!, let tasks = dataAry, tasks.count > 0 {
-                TaskSingleTon.sharedInstance.allTasks = tasks
-            } else {
-                TaskSingleTon.sharedInstance.allTasks = TaskMaker().createTask()
-            }
-            
-            TaskSingleTon.sharedInstance.saveTasks()
-            self.tableView.reloadData()
-        })
+        tableView.reloadData()
     }
 
     func showClueViewController() {

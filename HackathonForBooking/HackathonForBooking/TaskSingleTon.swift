@@ -49,9 +49,9 @@ class TaskSingleTon: NSObject {
                 UserDefaults.standard.synchronize()
             }
             
-            DispatchQueue.main.async {
+            //DispatchQueue.main.async {
                 //if needed
-            }
+            //}
         }
     }
 
