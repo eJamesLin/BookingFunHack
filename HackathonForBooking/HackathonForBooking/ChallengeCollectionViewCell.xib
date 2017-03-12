@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ChallengeCollectionViewCell" customModule="HackathonForBooking" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="225" height="260"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="225" height="260"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="taipei" translatesAutoresizingMaskIntoConstraints="NO" id="l2s-uw-rVP">
+                        <rect key="frame" x="0.0" y="0.0" width="225" height="225"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="l2s-uw-rVP" secondAttribute="height" id="F7V-lz-Fn8"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="l2s-uw-rVP" secondAttribute="trailing" id="MiI-9b-QbC"/>
+                <constraint firstItem="l2s-uw-rVP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pbJ-iO-fGf"/>
+                <constraint firstItem="l2s-uw-rVP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="w6u-2S-IGa"/>
+            </constraints>
+            <size key="customSize" width="225" height="262"/>
+            <connections>
+                <outlet property="imageView" destination="l2s-uw-rVP" id="WdZ-Z1-Ein"/>
+            </connections>
+            <point key="canvasLocation" x="-144.5" y="-11"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="taipei" width="225" height="225"/>
+    </resources>
+</document>
