@@ -12,7 +12,7 @@
         <!--Coupon View Controller-->
         <scene sceneID="Xgo-Ns-RNk">
             <objects>
-                <viewController id="7yf-yo-dYj" customClass="CouponViewController" customModule="HackathonForBooking" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CouponViewController" id="7yf-yo-dYj" customClass="CouponViewController" customModule="HackathonForBooking" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tem-lR-Odu"/>
                         <viewControllerLayoutGuide type="bottom" id="HZF-1b-nZB"/>
