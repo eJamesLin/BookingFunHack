@@ -20,11 +20,19 @@ class TimelineTableViewController: UITableViewController {
 
         self.tableView.estimatedRowHeight = 140
         self.tableView.separatorStyle = .none
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Get clue", style: .done, target: self, action: #selector(showClueViewController))
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+    }
+
+    func showClueViewController() {
+        let sb = UIStoryboard(name: "GetClue", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "QuestionViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     // MARK: - Table view data source
