@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22C6DD071E74E60100443C55 /* Coupon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C6DD061E74E60100443C55 /* Coupon.storyboard */; };
-		22C6DD091E74E61E00443C55 /* CouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C6DD081E74E61E00443C55 /* CouponViewController.swift */; };
 		1431BCD71E74DA1D0095FE9E /* GetClueQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431BCD61E74DA1D0095FE9E /* GetClueQuestion.swift */; };
 		1431BCD91E74E1C10095FE9E /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431BCD81E74E1C10095FE9E /* QuestionViewController.swift */; };
 		1431BCDD1E74E9EC0095FE9E /* GetClue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1431BCDC1E74E9EC0095FE9E /* GetClue.storyboard */; };
@@ -16,8 +14,9 @@
 		1431BCE11E74F49B0095FE9E /* AnswerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1431BCDF1E74F49B0095FE9E /* AnswerTableViewCell.xib */; };
 		1431BCE31E74FEB80095FE9E /* CorrectAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431BCE21E74FEB80095FE9E /* CorrectAnswerViewController.swift */; };
 		1431BCE51E74FF0C0095FE9E /* CongratsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431BCE41E74FF0C0095FE9E /* CongratsViewController.swift */; };
+		22C6DD071E74E60100443C55 /* Coupon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C6DD061E74E60100443C55 /* Coupon.storyboard */; };
+		22C6DD091E74E61E00443C55 /* CouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C6DD081E74E61E00443C55 /* CouponViewController.swift */; };
 		539794341E727D4000B12B96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539794331E727D4000B12B96 /* AppDelegate.swift */; };
-		539794361E727D4000B12B96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539794351E727D4000B12B96 /* ViewController.swift */; };
 		539794391E727D4000B12B96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539794371E727D4000B12B96 /* Main.storyboard */; };
 		5397943B1E727D4000B12B96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5397943A1E727D4000B12B96 /* Assets.xcassets */; };
 		5397943E1E727D4000B12B96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5397943C1E727D4000B12B96 /* LaunchScreen.storyboard */; };
@@ -43,8 +42,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		22C6DD061E74E60100443C55 /* Coupon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Coupon.storyboard; sourceTree = "<group>"; };
-		22C6DD081E74E61E00443C55 /* CouponViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponViewController.swift; sourceTree = "<group>"; };
 		1431BCD61E74DA1D0095FE9E /* GetClueQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetClueQuestion.swift; sourceTree = "<group>"; };
 		1431BCD81E74E1C10095FE9E /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		1431BCDC1E74E9EC0095FE9E /* GetClue.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GetClue.storyboard; sourceTree = "<group>"; };
@@ -52,9 +49,10 @@
 		1431BCDF1E74F49B0095FE9E /* AnswerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerTableViewCell.xib; sourceTree = "<group>"; };
 		1431BCE21E74FEB80095FE9E /* CorrectAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorrectAnswerViewController.swift; sourceTree = "<group>"; };
 		1431BCE41E74FF0C0095FE9E /* CongratsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratsViewController.swift; sourceTree = "<group>"; };
+		22C6DD061E74E60100443C55 /* Coupon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Coupon.storyboard; sourceTree = "<group>"; };
+		22C6DD081E74E61E00443C55 /* CouponViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponViewController.swift; sourceTree = "<group>"; };
 		539794301E727D4000B12B96 /* HackathonForBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackathonForBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		539794331E727D4000B12B96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		539794351E727D4000B12B96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		539794381E727D4000B12B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5397943A1E727D4000B12B96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5397943D1E727D4000B12B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,15 +93,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		22C6DD031E74E11C00443C55 /* CouponViewController */ = {
-			isa = PBXGroup;
-			children = (
-				22C6DD061E74E60100443C55 /* Coupon.storyboard */,
-				22C6DD081E74E61E00443C55 /* CouponViewController.swift */,
-			);
-			name = CouponViewController;
-			sourceTree = "<group>";
-		};
 		1431BCD51E74D5A50095FE9E /* GetClueQA */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +105,15 @@
 				1431BCE41E74FF0C0095FE9E /* CongratsViewController.swift */,
 			);
 			name = GetClueQA;
+			sourceTree = "<group>";
+		};
+		22C6DD031E74E11C00443C55 /* CouponViewController */ = {
+			isa = PBXGroup;
+			children = (
+				22C6DD061E74E60100443C55 /* Coupon.storyboard */,
+				22C6DD081E74E61E00443C55 /* CouponViewController.swift */,
+			);
+			name = CouponViewController;
 			sourceTree = "<group>";
 		};
 		539794271E727D4000B12B96 = {
@@ -139,24 +137,30 @@
 		539794321E727D4000B12B96 /* HackathonForBooking */ = {
 			isa = PBXGroup;
 			children = (
+				539794511E7511B300B12B96 /* TaskVC */,
 				22C6DD031E74E11C00443C55 /* CouponViewController */,
 				1431BCD51E74D5A50095FE9E /* GetClueQA */,
 				DB50E01C1E73F9BA00203C7B /* Utility */,
 				DB50E00F1E73F99900203C7B /* TaskTableViewController */,
 				DB50E00A1E73F97500203C7B /* StartViewController */,
 				539794331E727D4000B12B96 /* AppDelegate.swift */,
-				539794351E727D4000B12B96 /* ViewController.swift */,
-				5397944D1E73F1EB00B12B96 /* PlaceVC.swift */,
 				539794371E727D4000B12B96 /* Main.storyboard */,
-				539794451E73C27500B12B96 /* TaskPhotoVC.swift */,
 				539794471E73CFB800B12B96 /* TaskObject.swift */,
 				5397944B1E73E8F600B12B96 /* TaskSingleTon.swift */,
-				539794491E73D8B400B12B96 /* TaskMaker.swift */,
 				5397943A1E727D4000B12B96 /* Assets.xcassets */,
 				5397943C1E727D4000B12B96 /* LaunchScreen.storyboard */,
 				5397943F1E727D4000B12B96 /* Info.plist */,
 			);
 			path = HackathonForBooking;
+			sourceTree = "<group>";
+		};
+		539794511E7511B300B12B96 /* TaskVC */ = {
+			isa = PBXGroup;
+			children = (
+				5397944D1E73F1EB00B12B96 /* PlaceVC.swift */,
+				539794451E73C27500B12B96 /* TaskPhotoVC.swift */,
+			);
+			name = TaskVC;
 			sourceTree = "<group>";
 		};
 		5B50EA6BA92670DFF9AED438 /* Frameworks */ = {
@@ -203,6 +207,7 @@
 			children = (
 				DB50E01D1E745EB300203C7B /* UIViewExtension.swift */,
 				DB50E0151E73F9B500203C7B /* UIColor+Utility.swift */,
+				539794491E73D8B400B12B96 /* TaskMaker.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -360,7 +365,6 @@
 				DB50E00E1E73F99500203C7B /* StartViewController.swift in Sources */,
 				1431BCD71E74DA1D0095FE9E /* GetClueQuestion.swift in Sources */,
 				DB50E01E1E745EB300203C7B /* UIViewExtension.swift in Sources */,
-				539794361E727D4000B12B96 /* ViewController.swift in Sources */,
 				DB50E0271E74FC7B00203C7B /* ChallengeCollectionViewCell.swift in Sources */,
 				539794481E73CFB800B12B96 /* TaskObject.swift in Sources */,
 				DB50E0171E73F9B500203C7B /* TimelinePoint.swift in Sources */,
