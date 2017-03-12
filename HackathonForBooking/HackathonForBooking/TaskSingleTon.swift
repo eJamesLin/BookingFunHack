@@ -26,14 +26,16 @@ class TaskSingleTon: NSObject {
             complectionHandler(false, [])
             return
         }
-
-        guard let unarchiveTask = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data as NSData) as? [TaskObject] else {
-            complectionHandler(false, [])
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+            guard let unarchiveTask = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data as NSData) as? [TaskObject] else {
+                complectionHandler(false, [])
+                return
+            }
+            
+            complectionHandler(true, unarchiveTask!)
             return
         }
-
-        complectionHandler(true, unarchiveTask!)
-        return
     }
 
     func saveTasks() {

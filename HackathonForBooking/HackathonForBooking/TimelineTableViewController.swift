@@ -24,7 +24,17 @@ class TimelineTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.reloadData()
+        
+        TaskSingleTon.sharedInstance.getTasksFromDisk(complectionHandler: {(success: Bool?, dataAry: [TaskObject]?) in
+            if success!, let tasks = dataAry, tasks.count > 0 {
+                TaskSingleTon.sharedInstance.allTasks = tasks
+            } else {
+                TaskSingleTon.sharedInstance.allTasks = TaskMaker().createTask()
+            }
+            
+            TaskSingleTon.sharedInstance.saveTasks()
+            self.tableView.reloadData()
+        })
     }
 
     // MARK: - Table view data source
