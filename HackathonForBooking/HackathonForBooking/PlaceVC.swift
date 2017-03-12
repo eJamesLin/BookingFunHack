@@ -28,7 +28,10 @@ class PlaceVC: UIViewController {
     var placeName: String?
     var address: String?
     var location: Dictionary<String, Any>?
-
+    var checkIn: Dictionary<String, Any>?
+    var checkOut: Dictionary<String, Any>?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getPlaceData()
@@ -52,10 +55,14 @@ class PlaceVC: UIViewController {
                             let dicData: Dictionary<String, Any> = resData[0] as! Dictionary
                             if let placeName = dicData["name"] as? String,
                                 let address = dicData["address"] as? String,
-                                let location = dicData["location"] as? Dictionary<String, Any> {
+                                let location = dicData["location"] as? Dictionary<String, Any>,
+                                let checkin = dicData["checkin"] as? Dictionary<String, Any>,
+                                let checkout = dicData["checkout"] as? Dictionary<String, Any>{
                                 weakSelf.placeName = placeName
                                 weakSelf.address = address
                                 weakSelf.location = location
+                                weakSelf.checkIn = checkin
+                                weakSelf.checkOut = checkout
                                 weakSelf.updateUI()
                             }
                         }
@@ -66,8 +73,10 @@ class PlaceVC: UIViewController {
     }
     
     func updateUI() {
-        self.labelTitle.text = self.placeName
-        self.labelAddress.text = self.address
+        self.title = self.placeName!
+        
+        self.labelTitle.text = self.placeName!
+        self.labelAddress.text = "Address:\n\(self.address!)\nCheckIn: \(self.checkIn!["from"]!)-\(self.checkIn!["to"]!)\nCheckOut: \(self.checkOut!["from"]!)-\(self.checkOut!["to"]!)"
         
         if let lat = self.location?["latitude"] as? String,
             let lon = self.location?["longitude"] as? String {
