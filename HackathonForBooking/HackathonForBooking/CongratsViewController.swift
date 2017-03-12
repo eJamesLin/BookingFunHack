@@ -10,26 +10,14 @@ import UIKit
 
 class CongratsViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func buttonAction(_ sender: Any) {
+        guard let arr = navigationController?.viewControllers else { return }
 
-        // Do any additional setup after loading the view.
+        for vc in arr {
+            if vc is TimelineTableViewController {
+                _ = navigationController?.popToViewController(vc, animated: true)
+                break
+            }
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
