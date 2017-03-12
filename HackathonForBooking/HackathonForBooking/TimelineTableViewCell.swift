@@ -38,7 +38,7 @@ class TimelineTableViewCell: UITableViewCell {
     var statusFinished: Bool = false {
         didSet {
             if statusFinished {
-                statusLabel.text = "Finished"
+                statusLabel.text = "Done"
                 statusLabel.textColor = UIColor.themeBlue()
                 statusLeftSeperator.backgroundColor = UIColor.themeBlue()
                 statusRightSeperator.backgroundColor = UIColor.themeBlue()

@@ -16,7 +16,7 @@ class TaskMaker: NSObject {
         t1.shouldBeDisplayed = true
         t1.isUnlock = true
         let t2 = TaskObject(taskID: 2, title: "On top of 101", content: "Definitely need a selfie with 101 tower.")
-        let t3 = TaskObject(taskID: 3, title: "Best BEER in the town!!!", content: "Enjoy your relax moment at the bar, share with your friends")
+        let t3 = TaskObject(taskID: 3, title: "Best BEER in the town!!!", content: "Share your relax moment at the bar")
         t3.isUnlock = true
         let t4 = TaskObject(taskID: 4, title: "Having some tasty Shit for the sweet trip", content: "Have a coolest selfie at Modern Toilet Restaurant, and smell!!!")
         t4.isUnlock = true
