@@ -48,10 +48,6 @@ class TaskSingleTon: NSObject {
                 UserDefaults.standard.set(savedData, forKey: self.keyForCategory(category))
                 UserDefaults.standard.synchronize()
             }
-            
-            //DispatchQueue.main.async {
-                //if needed
-            //}
         }
     }
 
