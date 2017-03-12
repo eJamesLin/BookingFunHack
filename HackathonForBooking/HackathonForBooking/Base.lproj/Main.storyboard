@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,48 +40,88 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wjn-8Q-uSy">
-                                <rect key="frame" x="29" y="50" width="316" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wjn-8Q-uSy">
+                                <rect key="frame" x="29" y="40" width="317" height="27"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXo-Op-ezc">
-                                <rect key="frame" x="29" y="101" width="316" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXo-Op-ezc">
+                                <rect key="frame" x="29" y="87" width="317" height="27"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2e-62-ZGS">
-                                <rect key="frame" x="49" y="220" width="276" height="178"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2e-62-ZGS">
+                                <rect key="frame" x="0.0" y="204" width="375" height="291"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="I2e-62-ZGS" secondAttribute="height" multiplier="125:97" id="Zjw-5A-00S"/>
+                                </constraints>
+                                <state key="normal" image="Camera"/>
                                 <connections>
                                     <action selector="takePhoto:" destination="UbD-c5-pgZ" eventType="touchUpInside" id="0Fv-Ue-cbF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7r-AS-EVr">
-                                <rect key="frame" x="96" y="510" width="183" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.1672718857089289" green="0.2400603869594321" blue="0.57230675220489502" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9dS-at-NHZ">
+                                <rect key="frame" x="0.0" y="204" width="375" height="291"/>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7r-AS-EVr">
+                                <rect key="frame" x="96" y="568" width="183" height="49"/>
+                                <color key="backgroundColor" red="0.027450980392156862" green="0.58431372549019611" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="u7r-AS-EVr" secondAttribute="height" multiplier="183:49" id="6P6-YU-mBC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                 <state key="normal" title="Finish">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="finish:" destination="UbD-c5-pgZ" eventType="touchUpInside" id="ltO-E8-ktD"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9dS-at-NHZ">
-                                <rect key="frame" x="67" y="245" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQ2-0B-aLe">
+                                <rect key="frame" x="116" y="144" width="143" height="30"/>
+                                <state key="normal" title="Use Coupon">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="u7r-AS-EVr" secondAttribute="trailing" constant="80" id="1tW-cL-keA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pXo-Op-ezc" secondAttribute="trailing" constant="13" id="2Hb-bP-Ji5"/>
+                            <constraint firstItem="IQ2-0B-aLe" firstAttribute="top" secondItem="pXo-Op-ezc" secondAttribute="bottom" constant="30" id="2ns-Mb-Ml8"/>
+                            <constraint firstItem="Wjn-8Q-uSy" firstAttribute="top" secondItem="KBU-sQ-Dgf" secondAttribute="bottom" constant="20" id="6Zg-LO-Way"/>
+                            <constraint firstItem="u7r-AS-EVr" firstAttribute="leading" secondItem="qhq-jk-zdU" secondAttribute="leadingMargin" constant="80" id="9cu-Pa-b4c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IQ2-0B-aLe" secondAttribute="trailing" constant="100" id="Asn-vm-lWl"/>
+                            <constraint firstItem="I2e-62-ZGS" firstAttribute="leading" secondItem="qhq-jk-zdU" secondAttribute="leading" id="DLc-qT-Iss"/>
+                            <constraint firstItem="9dS-at-NHZ" firstAttribute="width" secondItem="I2e-62-ZGS" secondAttribute="width" id="GdM-tH-ZQv"/>
+                            <constraint firstItem="pXo-Op-ezc" firstAttribute="top" secondItem="Wjn-8Q-uSy" secondAttribute="bottom" constant="20" id="OQ7-LW-qu9"/>
+                            <constraint firstAttribute="trailing" secondItem="I2e-62-ZGS" secondAttribute="trailing" id="Oxs-V4-Tce"/>
+                            <constraint firstItem="9dS-at-NHZ" firstAttribute="height" secondItem="I2e-62-ZGS" secondAttribute="height" id="U7X-AX-M45"/>
+                            <constraint firstItem="IQ2-0B-aLe" firstAttribute="leading" secondItem="qhq-jk-zdU" secondAttribute="leadingMargin" constant="100" id="aem-o4-xIT"/>
+                            <constraint firstItem="Wjn-8Q-uSy" firstAttribute="leading" secondItem="qhq-jk-zdU" secondAttribute="leadingMargin" constant="13" id="al6-Yd-v8G"/>
+                            <constraint firstItem="pXo-Op-ezc" firstAttribute="leading" secondItem="qhq-jk-zdU" secondAttribute="leadingMargin" constant="13" id="bqC-NN-eqN"/>
+                            <constraint firstItem="I2e-62-ZGS" firstAttribute="top" secondItem="IQ2-0B-aLe" secondAttribute="bottom" constant="30" id="d1P-jQ-mnA"/>
+                            <constraint firstItem="Wjn-8Q-uSy" firstAttribute="centerX" secondItem="qhq-jk-zdU" secondAttribute="centerX" id="eud-cO-smQ"/>
+                            <constraint firstItem="9dS-at-NHZ" firstAttribute="leading" secondItem="qhq-jk-zdU" secondAttribute="leading" id="ica-Ot-GS2"/>
+                            <constraint firstItem="ljV-OD-wcV" firstAttribute="top" secondItem="u7r-AS-EVr" secondAttribute="bottom" constant="50" id="kbX-rX-kKX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wjn-8Q-uSy" secondAttribute="trailing" constant="13" id="kh0-o1-L5j"/>
+                            <constraint firstItem="9dS-at-NHZ" firstAttribute="top" secondItem="IQ2-0B-aLe" secondAttribute="bottom" constant="30" id="lm8-Cv-BCE"/>
+                            <constraint firstItem="u7r-AS-EVr" firstAttribute="centerX" secondItem="qhq-jk-zdU" secondAttribute="centerX" id="m8p-Ie-mC8"/>
+                            <constraint firstItem="IQ2-0B-aLe" firstAttribute="centerX" secondItem="qhq-jk-zdU" secondAttribute="centerX" id="mLz-Q0-yLa"/>
+                            <constraint firstItem="pXo-Op-ezc" firstAttribute="centerX" secondItem="qhq-jk-zdU" secondAttribute="centerX" id="oiC-Y7-Yug"/>
+                            <constraint firstAttribute="trailing" secondItem="9dS-at-NHZ" secondAttribute="trailing" id="vab-JB-g6y"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="btnFinish" destination="u7r-AS-EVr" id="fvZ-7E-TqU"/>
+                        <outlet property="btnUseCoupon" destination="IQ2-0B-aLe" id="Y4s-rs-HBH"/>
                         <outlet property="imgTask" destination="9dS-at-NHZ" id="u7p-yJ-kGJ"/>
                         <outlet property="taskContent" destination="pXo-Op-ezc" id="M64-BN-4sf"/>
                         <outlet property="taskTitle" destination="Wjn-8Q-uSy" id="tiP-35-uKF"/>
@@ -87,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hpn-u4-CcE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="900" y="37"/>
+            <point key="canvasLocation" x="900" y="36.431784107946029"/>
         </scene>
         <!--PlaceVC-->
         <scene sceneID="BUh-Pf-4Jq">
@@ -130,7 +172,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fy4-Df-hhW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1648" y="33"/>
+            <point key="canvasLocation" x="1820" y="36"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Camera" width="562" height="408"/>
+    </resources>
 </document>
