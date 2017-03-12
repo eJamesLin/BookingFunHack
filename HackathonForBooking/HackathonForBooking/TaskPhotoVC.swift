@@ -47,7 +47,20 @@ class TaskPhotoVC: UIViewController {
             self.taskTitle.text = task.taskTitle
             
             self.taskContent.text = task.taskContent
+            
+            self.addNavigationBarItem()
         }
+    }
+    
+    fileprivate func addNavigationBarItem() {
+        let rightBarItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(TaskPhotoVC.toPlaceDetail))
+        self.navigationItem.rightBarButtonItem = rightBarItem
+    }
+    
+    @objc fileprivate func toPlaceDetail() {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "PlaceVC")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func takePhoto(_ sender: Any) {
