@@ -38,6 +38,7 @@
 		DB50E0241E74E8A000203C7B /* NavigationTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB50E0231E74E8A000203C7B /* NavigationTitleView.xib */; };
 		DB50E0271E74FC7B00203C7B /* ChallengeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50E0251E74FC7B00203C7B /* ChallengeCollectionViewCell.swift */; };
 		DB50E0281E74FC7B00203C7B /* ChallengeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB50E0261E74FC7B00203C7B /* ChallengeCollectionViewCell.xib */; };
+		DB50E02B1E751AD000203C7B /* MLStarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50E02A1E751AD000203C7B /* MLStarsView.swift */; };
 		E1D6D348CFB895C5629E9C6A /* Pods_HackathonForBooking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCD3C6FD89FBA5DE77E1302 /* Pods_HackathonForBooking.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		DB50E0231E74E8A000203C7B /* NavigationTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationTitleView.xib; sourceTree = "<group>"; };
 		DB50E0251E74FC7B00203C7B /* ChallengeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB50E0261E74FC7B00203C7B /* ChallengeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeCollectionViewCell.xib; sourceTree = "<group>"; };
+		DB50E02A1E751AD000203C7B /* MLStarsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLStarsView.swift; sourceTree = "<group>"; };
 		ECCD3C6FD89FBA5DE77E1302 /* Pods_HackathonForBooking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackathonForBooking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -215,6 +217,7 @@
 		DB50E0291E74FC8800203C7B /* view */ = {
 			isa = PBXGroup;
 			children = (
+				DB50E02A1E751AD000203C7B /* MLStarsView.swift */,
 				DB50E00B1E73F99500203C7B /* Start.storyboard */,
 				DB50E0231E74E8A000203C7B /* NavigationTitleView.xib */,
 				DB50E0251E74FC7B00203C7B /* ChallengeCollectionViewCell.swift */,
@@ -372,6 +375,7 @@
 				DB50E01B1E73F9B500203C7B /* UIColor+Utility.swift in Sources */,
 				1431BCE31E74FEB80095FE9E /* CorrectAnswerViewController.swift in Sources */,
 				1431BCE51E74FF0C0095FE9E /* CongratsViewController.swift in Sources */,
+				DB50E02B1E751AD000203C7B /* MLStarsView.swift in Sources */,
 				5397944A1E73D8B400B12B96 /* TaskMaker.swift in Sources */,
 				1431BCE01E74F49B0095FE9E /* AnswerTableViewCell.swift in Sources */,
 				539794461E73C27500B12B96 /* TaskPhotoVC.swift in Sources */,
