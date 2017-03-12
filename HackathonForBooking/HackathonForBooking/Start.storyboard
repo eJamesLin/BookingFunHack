@@ -18,21 +18,28 @@
                         <viewControllerLayoutGuide type="bottom" id="qBc-mr-5RO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5o2-rz-a2l">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNa-m5-9UP">
-                                <rect key="frame" x="171" y="319" width="32" height="30"/>
+                                <rect key="frame" x="171" y="287" width="32" height="30"/>
                                 <state key="normal" title="start"/>
                                 <connections>
                                     <action selector="startSolvingTask:" destination="xjt-1f-zJn" eventType="touchUpInside" id="zrC-6E-5zw"/>
                                 </connections>
                             </button>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nqF-Xh-7eG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="nqF-Xh-7eG" firstAttribute="top" secondItem="81p-Fu-Akx" secondAttribute="bottom" id="0eF-xc-VBQ"/>
                             <constraint firstItem="yNa-m5-9UP" firstAttribute="centerY" secondItem="5o2-rz-a2l" secondAttribute="centerY" id="8ZV-Q8-uW7"/>
                             <constraint firstItem="yNa-m5-9UP" firstAttribute="centerX" secondItem="5o2-rz-a2l" secondAttribute="centerX" id="EIO-pV-MuD"/>
+                            <constraint firstAttribute="trailing" secondItem="nqF-Xh-7eG" secondAttribute="trailing" id="aJ3-yg-bLO"/>
+                            <constraint firstItem="nqF-Xh-7eG" firstAttribute="leading" secondItem="5o2-rz-a2l" secondAttribute="leading" id="fe3-h1-mlh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1Qe-ra-Sta"/>
@@ -45,10 +52,14 @@
         <scene sceneID="X5Y-aM-Ctf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YKd-nC-TdT" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xZd-nH-sxy">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="xZd-nH-sxy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.16078431369999999" green="0.1764705882" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.16078431369999999" green="0.1764705882" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
