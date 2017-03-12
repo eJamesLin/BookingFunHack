@@ -96,6 +96,8 @@
 				22C6DD081E74E61E00443C55 /* CouponViewController.swift */,
 			);
 			name = CouponViewController;
+			sourceTree = "<group>";
+		};
 		1431BCD51E74D5A50095FE9E /* GetClueQA */ = {
 			isa = PBXGroup;
 			children = (
