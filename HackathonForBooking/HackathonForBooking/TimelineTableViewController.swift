@@ -65,6 +65,12 @@ class TimelineTableViewController: UITableViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
+    func toReward() {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "RewardVC")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -140,5 +146,30 @@ class TimelineTableViewController: UITableViewController {
 
             index += 1
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        if let lastTask = TaskSingleTon.sharedInstance.allTasks.last,
+            lastTask.taskFinished {
+            let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 50))
+            
+            let rewardBtn = UIButton(frame: CGRect(x: 0, y: 5, width: tableView.frame.size.width, height: 40))
+            rewardBtn.addTarget(self, action: #selector(self.toReward), for: .touchUpInside)
+            rewardBtn.setTitle("Completion", for: .normal)
+            rewardBtn.backgroundColor = UIColor.themeBlue()
+            
+            footerView.addSubview(rewardBtn)
+            
+            return footerView
+        }
+        return nil
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        if let lastTask = TaskSingleTon.sharedInstance.allTasks.last,
+            lastTask.taskFinished {
+            return 50.0
+        }
+        return 0
     }
 }
