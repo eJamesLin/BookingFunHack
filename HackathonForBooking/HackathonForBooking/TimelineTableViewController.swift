@@ -21,6 +21,23 @@ class TimelineTableViewController: UITableViewController {
         self.tableView.estimatedRowHeight = 140
         self.tableView.separatorStyle = .none
 
+        //
+        let imageView = UIImageView(image: UIImage(named: "banner"))
+        imageView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: 150)
+        let titleLabel = UILabel()
+        titleLabel.text = "Taipei\nChallenge"
+        titleLabel.textAlignment = .right
+        titleLabel.numberOfLines = 2
+        titleLabel.textColor = UIColor.white
+        titleLabel.font = UIFont.systemFont(ofSize: 48)
+        imageView.addSubview(titleLabel)
+        titleLabel.snp.makeConstraints { (make) -> Void in
+            make.bottom.equalTo(0).offset(-20)
+            make.trailing.equalTo(0).offset(-20)
+        }
+        self.tableView.tableHeaderView = imageView
+
+        //
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Get clue", style: .done, target: self, action: #selector(showClueViewController))
 
         TaskSingleTon.sharedInstance.getTasksFromDisk(complectionHandler: {(success: Bool?, dataAry: [TaskObject]?) in
@@ -32,14 +49,14 @@ class TimelineTableViewController: UITableViewController {
                 }
 
                 TaskSingleTon.sharedInstance.saveTasks()
-                self.tableView.reloadData()
+                self.animateTableView(self.tableView)
             }
         })
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.reloadData()
+        animateTableView(tableView)
     }
 
     func showClueViewController() {
@@ -101,5 +118,27 @@ class TimelineTableViewController: UITableViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: "TaskPhotoVC") as! TaskPhotoVC
         vc.task = task
         navigationController?.pushViewController(vc, animated: true)
+    }
+
+    func animateTableView(_ tableView: UITableView) {
+        tableView.reloadData()
+
+        let cells = tableView.visibleCells
+        let tableHeight: CGFloat = tableView.bounds.size.height
+
+        for cell in cells {
+            cell.transform = CGAffineTransform(translationX: 0, y: tableHeight)
+        }
+
+        var index = 0
+
+        for c in cells {
+            let cell: UITableViewCell = c
+            UIView.animate(withDuration: 1, delay: 0.1 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0.1, options: .curveLinear, animations: {
+                cell.transform = CGAffineTransform(translationX: 0, y: 0);
+            }, completion: nil)
+
+            index += 1
+        }
     }
 }
