@@ -122,17 +122,14 @@ class TaskPhotoVC: UIViewController {
         }
 
         TaskSingleTon.sharedInstance.saveTasks()
-<<<<<<< Updated upstream
         
         _ = self.navigationController?.popViewController(animated: true)
     }
+    
     @IBAction func useCoupon(_ sender: Any) {
         let sb = UIStoryboard(name: "Coupon", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "CouponViewController")
         self.navigationController?.pushViewController(vc, animated: true)
-=======
-        self.navigationController?.popViewController(animated: true)
->>>>>>> Stashed changes
     }
 }
 
