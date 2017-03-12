@@ -21,6 +21,23 @@ class TimelineTableViewController: UITableViewController {
         self.tableView.estimatedRowHeight = 140
         self.tableView.separatorStyle = .none
 
+        //
+        let imageView = UIImageView(image: UIImage(named: "banner"))
+        imageView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: 150)
+        let titleLabel = UILabel()
+        titleLabel.text = "Taipei\nChallenge"
+        titleLabel.textAlignment = .right
+        titleLabel.numberOfLines = 2
+        titleLabel.textColor = UIColor.white
+        titleLabel.font = UIFont.systemFont(ofSize: 48)
+        imageView.addSubview(titleLabel)
+        titleLabel.snp.makeConstraints { (make) -> Void in
+            make.bottom.equalTo(0).offset(-20)
+            make.trailing.equalTo(0).offset(-20)
+        }
+        self.tableView.tableHeaderView = imageView
+
+        //
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Get clue", style: .done, target: self, action: #selector(showClueViewController))
 
         TaskSingleTon.sharedInstance.getTasksFromDisk(complectionHandler: {(success: Bool?, dataAry: [TaskObject]?) in
