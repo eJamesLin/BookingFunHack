@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22C6DD071E74E60100443C55 /* Coupon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C6DD061E74E60100443C55 /* Coupon.storyboard */; };
-		22C6DD091E74E61E00443C55 /* CouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C6DD081E74E61E00443C55 /* CouponViewController.swift */; };
 		1431BCD71E74DA1D0095FE9E /* GetClueQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431BCD61E74DA1D0095FE9E /* GetClueQuestion.swift */; };
 		1431BCD91E74E1C10095FE9E /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431BCD81E74E1C10095FE9E /* QuestionViewController.swift */; };
 		1431BCDD1E74E9EC0095FE9E /* GetClue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1431BCDC1E74E9EC0095FE9E /* GetClue.storyboard */; };
@@ -16,6 +14,8 @@
 		1431BCE11E74F49B0095FE9E /* AnswerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1431BCDF1E74F49B0095FE9E /* AnswerTableViewCell.xib */; };
 		1431BCE31E74FEB80095FE9E /* CorrectAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431BCE21E74FEB80095FE9E /* CorrectAnswerViewController.swift */; };
 		1431BCE51E74FF0C0095FE9E /* CongratsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431BCE41E74FF0C0095FE9E /* CongratsViewController.swift */; };
+		22C6DD071E74E60100443C55 /* Coupon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C6DD061E74E60100443C55 /* Coupon.storyboard */; };
+		22C6DD091E74E61E00443C55 /* CouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C6DD081E74E61E00443C55 /* CouponViewController.swift */; };
 		539794341E727D4000B12B96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539794331E727D4000B12B96 /* AppDelegate.swift */; };
 		539794361E727D4000B12B96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539794351E727D4000B12B96 /* ViewController.swift */; };
 		539794391E727D4000B12B96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539794371E727D4000B12B96 /* Main.storyboard */; };
@@ -39,12 +39,11 @@
 		DB50E0241E74E8A000203C7B /* NavigationTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB50E0231E74E8A000203C7B /* NavigationTitleView.xib */; };
 		DB50E0271E74FC7B00203C7B /* ChallengeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50E0251E74FC7B00203C7B /* ChallengeCollectionViewCell.swift */; };
 		DB50E0281E74FC7B00203C7B /* ChallengeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB50E0261E74FC7B00203C7B /* ChallengeCollectionViewCell.xib */; };
+		DB50E02B1E751AD000203C7B /* MLStarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50E02A1E751AD000203C7B /* MLStarsView.swift */; };
 		E1D6D348CFB895C5629E9C6A /* Pods_HackathonForBooking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCD3C6FD89FBA5DE77E1302 /* Pods_HackathonForBooking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		22C6DD061E74E60100443C55 /* Coupon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Coupon.storyboard; sourceTree = "<group>"; };
-		22C6DD081E74E61E00443C55 /* CouponViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponViewController.swift; sourceTree = "<group>"; };
 		1431BCD61E74DA1D0095FE9E /* GetClueQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetClueQuestion.swift; sourceTree = "<group>"; };
 		1431BCD81E74E1C10095FE9E /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		1431BCDC1E74E9EC0095FE9E /* GetClue.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GetClue.storyboard; sourceTree = "<group>"; };
@@ -52,6 +51,8 @@
 		1431BCDF1E74F49B0095FE9E /* AnswerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerTableViewCell.xib; sourceTree = "<group>"; };
 		1431BCE21E74FEB80095FE9E /* CorrectAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorrectAnswerViewController.swift; sourceTree = "<group>"; };
 		1431BCE41E74FF0C0095FE9E /* CongratsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratsViewController.swift; sourceTree = "<group>"; };
+		22C6DD061E74E60100443C55 /* Coupon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Coupon.storyboard; sourceTree = "<group>"; };
+		22C6DD081E74E61E00443C55 /* CouponViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponViewController.swift; sourceTree = "<group>"; };
 		539794301E727D4000B12B96 /* HackathonForBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackathonForBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		539794331E727D4000B12B96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		539794351E727D4000B12B96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 		DB50E0231E74E8A000203C7B /* NavigationTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationTitleView.xib; sourceTree = "<group>"; };
 		DB50E0251E74FC7B00203C7B /* ChallengeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB50E0261E74FC7B00203C7B /* ChallengeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeCollectionViewCell.xib; sourceTree = "<group>"; };
+		DB50E02A1E751AD000203C7B /* MLStarsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLStarsView.swift; sourceTree = "<group>"; };
 		ECCD3C6FD89FBA5DE77E1302 /* Pods_HackathonForBooking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackathonForBooking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,15 +97,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		22C6DD031E74E11C00443C55 /* CouponViewController */ = {
-			isa = PBXGroup;
-			children = (
-				22C6DD061E74E60100443C55 /* Coupon.storyboard */,
-				22C6DD081E74E61E00443C55 /* CouponViewController.swift */,
-			);
-			name = CouponViewController;
-			sourceTree = "<group>";
-		};
 		1431BCD51E74D5A50095FE9E /* GetClueQA */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +109,15 @@
 				1431BCE41E74FF0C0095FE9E /* CongratsViewController.swift */,
 			);
 			name = GetClueQA;
+			sourceTree = "<group>";
+		};
+		22C6DD031E74E11C00443C55 /* CouponViewController */ = {
+			isa = PBXGroup;
+			children = (
+				22C6DD061E74E60100443C55 /* Coupon.storyboard */,
+				22C6DD081E74E61E00443C55 /* CouponViewController.swift */,
+			);
+			name = CouponViewController;
 			sourceTree = "<group>";
 		};
 		539794271E727D4000B12B96 = {
@@ -210,6 +212,7 @@
 		DB50E0291E74FC8800203C7B /* view */ = {
 			isa = PBXGroup;
 			children = (
+				DB50E02A1E751AD000203C7B /* MLStarsView.swift */,
 				DB50E00B1E73F99500203C7B /* Start.storyboard */,
 				DB50E0231E74E8A000203C7B /* NavigationTitleView.xib */,
 				DB50E0251E74FC7B00203C7B /* ChallengeCollectionViewCell.swift */,
@@ -368,6 +371,7 @@
 				DB50E01B1E73F9B500203C7B /* UIColor+Utility.swift in Sources */,
 				1431BCE31E74FEB80095FE9E /* CorrectAnswerViewController.swift in Sources */,
 				1431BCE51E74FF0C0095FE9E /* CongratsViewController.swift in Sources */,
+				DB50E02B1E751AD000203C7B /* MLStarsView.swift in Sources */,
 				5397944A1E73D8B400B12B96 /* TaskMaker.swift in Sources */,
 				1431BCE01E74F49B0095FE9E /* AnswerTableViewCell.swift in Sources */,
 				539794461E73C27500B12B96 /* TaskPhotoVC.swift in Sources */,

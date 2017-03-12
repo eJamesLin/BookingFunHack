@@ -33,12 +33,22 @@ Challenge</string>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bkE-V0-Y8A" customClass="StarsView" customModule="HackathonForBooking" customModuleProvider="target">
+                        <rect key="frame" x="8" y="240" width="80" height="12"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="0Lx-Mn-kan"/>
+                            <constraint firstAttribute="width" constant="80" id="mMP-dM-dPQ"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="gWe-Qi-pFw" secondAttribute="trailing" constant="10" id="B3S-Ez-jHA"/>
+                <constraint firstItem="bkE-V0-Y8A" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="BVN-As-oRh"/>
                 <constraint firstItem="gWe-Qi-pFw" firstAttribute="bottom" secondItem="l2s-uw-rVP" secondAttribute="bottom" constant="-10" id="FlW-5N-FGR"/>
                 <constraint firstAttribute="trailing" secondItem="l2s-uw-rVP" secondAttribute="trailing" id="MiI-9b-QbC"/>
+                <constraint firstAttribute="bottom" secondItem="bkE-V0-Y8A" secondAttribute="bottom" constant="8" id="S6M-oq-dbF"/>
                 <constraint firstItem="l2s-uw-rVP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pbJ-iO-fGf"/>
                 <constraint firstItem="l2s-uw-rVP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="w6u-2S-IGa"/>
             </constraints>

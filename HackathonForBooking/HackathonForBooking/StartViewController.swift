@@ -19,6 +19,7 @@ class StartViewController: UIViewController {
         flowLayout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: flowLayout)
         collectionView.tag = 0
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
         return collectionView
     }()
 
@@ -27,6 +28,7 @@ class StartViewController: UIViewController {
         flowLayout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: flowLayout)
         collectionView.tag = 1
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
         return collectionView
     }()
 
