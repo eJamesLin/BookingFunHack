@@ -7,8 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< Updated upstream
 		22C6DD071E74E60100443C55 /* Coupon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C6DD061E74E60100443C55 /* Coupon.storyboard */; };
 		22C6DD091E74E61E00443C55 /* CouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C6DD081E74E61E00443C55 /* CouponViewController.swift */; };
+=======
+		1431BCD71E74DA1D0095FE9E /* GetClueQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431BCD61E74DA1D0095FE9E /* GetClueQuestion.swift */; };
+		1431BCD91E74E1C10095FE9E /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431BCD81E74E1C10095FE9E /* QuestionViewController.swift */; };
+		1431BCDD1E74E9EC0095FE9E /* GetClue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1431BCDC1E74E9EC0095FE9E /* GetClue.storyboard */; };
+		1431BCE01E74F49B0095FE9E /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431BCDE1E74F49B0095FE9E /* AnswerTableViewCell.swift */; };
+		1431BCE11E74F49B0095FE9E /* AnswerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1431BCDF1E74F49B0095FE9E /* AnswerTableViewCell.xib */; };
+		1431BCE31E74FEB80095FE9E /* CorrectAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431BCE21E74FEB80095FE9E /* CorrectAnswerViewController.swift */; };
+		1431BCE51E74FF0C0095FE9E /* CongratsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431BCE41E74FF0C0095FE9E /* CongratsViewController.swift */; };
+>>>>>>> Stashed changes
 		539794341E727D4000B12B96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539794331E727D4000B12B96 /* AppDelegate.swift */; };
 		539794361E727D4000B12B96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539794351E727D4000B12B96 /* ViewController.swift */; };
 		539794391E727D4000B12B96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539794371E727D4000B12B96 /* Main.storyboard */; };
@@ -33,8 +43,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+<<<<<<< Updated upstream
 		22C6DD061E74E60100443C55 /* Coupon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Coupon.storyboard; sourceTree = "<group>"; };
 		22C6DD081E74E61E00443C55 /* CouponViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponViewController.swift; sourceTree = "<group>"; };
+=======
+		1431BCD61E74DA1D0095FE9E /* GetClueQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetClueQuestion.swift; sourceTree = "<group>"; };
+		1431BCD81E74E1C10095FE9E /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		1431BCDC1E74E9EC0095FE9E /* GetClue.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GetClue.storyboard; sourceTree = "<group>"; };
+		1431BCDE1E74F49B0095FE9E /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
+		1431BCDF1E74F49B0095FE9E /* AnswerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerTableViewCell.xib; sourceTree = "<group>"; };
+		1431BCE21E74FEB80095FE9E /* CorrectAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorrectAnswerViewController.swift; sourceTree = "<group>"; };
+		1431BCE41E74FF0C0095FE9E /* CongratsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratsViewController.swift; sourceTree = "<group>"; };
+>>>>>>> Stashed changes
 		539794301E727D4000B12B96 /* HackathonForBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackathonForBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		539794331E727D4000B12B96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		539794351E727D4000B12B96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +95,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+<<<<<<< Updated upstream
 		22C6DD031E74E11C00443C55 /* CouponViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +103,20 @@
 				22C6DD081E74E61E00443C55 /* CouponViewController.swift */,
 			);
 			name = CouponViewController;
+=======
+		1431BCD51E74D5A50095FE9E /* GetClueQA */ = {
+			isa = PBXGroup;
+			children = (
+				1431BCD81E74E1C10095FE9E /* QuestionViewController.swift */,
+				1431BCD61E74DA1D0095FE9E /* GetClueQuestion.swift */,
+				1431BCDC1E74E9EC0095FE9E /* GetClue.storyboard */,
+				1431BCDE1E74F49B0095FE9E /* AnswerTableViewCell.swift */,
+				1431BCDF1E74F49B0095FE9E /* AnswerTableViewCell.xib */,
+				1431BCE21E74FEB80095FE9E /* CorrectAnswerViewController.swift */,
+				1431BCE41E74FF0C0095FE9E /* CongratsViewController.swift */,
+			);
+			name = GetClueQA;
+>>>>>>> Stashed changes
 			sourceTree = "<group>";
 		};
 		539794271E727D4000B12B96 = {
@@ -105,7 +140,11 @@
 		539794321E727D4000B12B96 /* HackathonForBooking */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< Updated upstream
 				22C6DD031E74E11C00443C55 /* CouponViewController */,
+=======
+				1431BCD51E74D5A50095FE9E /* GetClueQA */,
+>>>>>>> Stashed changes
 				DB50E01C1E73F9BA00203C7B /* Utility */,
 				DB50E00F1E73F99900203C7B /* TaskTableViewController */,
 				DB50E00A1E73F97500203C7B /* StartViewController */,
@@ -239,9 +278,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1431BCDD1E74E9EC0095FE9E /* GetClue.storyboard in Resources */,
 				5397943E1E727D4000B12B96 /* LaunchScreen.storyboard in Resources */,
 				DB50E00D1E73F99500203C7B /* Start.storyboard in Resources */,
 				DB50E0191E73F9B500203C7B /* TimelineTableViewCell.xib in Resources */,
+				1431BCE11E74F49B0095FE9E /* AnswerTableViewCell.xib in Resources */,
 				5397943B1E727D4000B12B96 /* Assets.xcassets in Resources */,
 				22C6DD071E74E60100443C55 /* Coupon.storyboard in Resources */,
 				539794391E727D4000B12B96 /* Main.storyboard in Resources */,
@@ -308,15 +349,20 @@
 				22C6DD091E74E61E00443C55 /* CouponViewController.swift in Sources */,
 				DB50E0181E73F9B500203C7B /* TimelineTableViewCell.swift in Sources */,
 				DB50E00E1E73F99500203C7B /* StartViewController.swift in Sources */,
+				1431BCD71E74DA1D0095FE9E /* GetClueQuestion.swift in Sources */,
 				DB50E01E1E745EB300203C7B /* UIViewExtension.swift in Sources */,
 				539794361E727D4000B12B96 /* ViewController.swift in Sources */,
 				539794481E73CFB800B12B96 /* TaskObject.swift in Sources */,
 				DB50E0171E73F9B500203C7B /* TimelinePoint.swift in Sources */,
 				DB50E01A1E73F9B500203C7B /* TimelineTableViewController.swift in Sources */,
 				DB50E01B1E73F9B500203C7B /* UIColor+Utility.swift in Sources */,
+				1431BCE31E74FEB80095FE9E /* CorrectAnswerViewController.swift in Sources */,
+				1431BCE51E74FF0C0095FE9E /* CongratsViewController.swift in Sources */,
 				5397944A1E73D8B400B12B96 /* TaskMaker.swift in Sources */,
+				1431BCE01E74F49B0095FE9E /* AnswerTableViewCell.swift in Sources */,
 				539794461E73C27500B12B96 /* TaskPhotoVC.swift in Sources */,
 				539794341E727D4000B12B96 /* AppDelegate.swift in Sources */,
+				1431BCD91E74E1C10095FE9E /* QuestionViewController.swift in Sources */,
 				5397944E1E73F1EB00B12B96 /* PlaceVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
