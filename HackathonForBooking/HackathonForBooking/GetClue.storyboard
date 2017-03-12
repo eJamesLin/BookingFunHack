@@ -102,7 +102,7 @@ Taiwan.</string>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7W-RL-TSP">
-                                <rect key="frame" x="117.5" y="596" width="140" height="31"/>
+                                <rect key="frame" x="118" y="596" width="140" height="31"/>
                                 <color key="backgroundColor" red="0.15051865577697754" green="0.15777266025543213" blue="0.45836067199707031" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="D1m-bD-Wfp"/>

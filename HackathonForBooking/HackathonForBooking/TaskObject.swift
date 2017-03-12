@@ -26,6 +26,7 @@ class TaskObject: NSObject, NSCoding {
     var taskFinished = false
 
     var shouldBeDisplayed = false
+    var isUnlock = false
     
     let userDefault = UserDefaults.standard
     
@@ -56,6 +57,7 @@ class TaskObject: NSObject, NSCoding {
 
         self.taskFinished = aDecoder.decodeBool(forKey: "taskFinished")
         self.shouldBeDisplayed = aDecoder.decodeBool(forKey: "shouldBeDisplayed")
+        self.isUnlock = aDecoder.decodeBool(forKey: "isUnlock")
     }
     
     func encode(with aCoder: NSCoder) {
@@ -65,5 +67,6 @@ class TaskObject: NSObject, NSCoding {
         aCoder.encode(self.taskPhoto, forKey: "photo")
         aCoder.encode(self.taskFinished, forKey: "taskFinished")
         aCoder.encode(self.shouldBeDisplayed, forKey: "shouldBeDisplayed")
+        aCoder.encode(self.isUnlock, forKey: "isUnlock")
     }
 }

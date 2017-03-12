@@ -65,6 +65,14 @@ class TimelineTableViewController: UITableViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
+    func didGotClue() {
+        // temp set all unlock
+        for task in TaskSingleTon.sharedInstance.allTasks {
+            task.isUnlock = true
+        }
+
+    }
+
     func toReward() {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "RewardVC")
@@ -107,6 +115,9 @@ class TimelineTableViewController: UITableViewController {
 
         if task.shouldBeDisplayed == false {
             cell.setupNotDisplaying()
+        } else if task.isUnlock == false {
+            cell.setupWaitForClue()
+            cell.getClueButton.addTarget(self, action: #selector(showClueViewController), for: .touchUpInside)
         } else {
             cell.setupWithTask(task)
         }

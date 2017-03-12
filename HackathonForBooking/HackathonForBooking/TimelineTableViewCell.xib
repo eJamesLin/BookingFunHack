@@ -28,7 +28,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWm-f0-Lj3">
-                        <rect key="frame" x="53" y="87" width="297" height="68"/>
+                        <rect key="frame" x="53" y="87" width="297" height="67"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                         <color key="textColor" red="0.16078431372549018" green="0.1764705882352941" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -47,7 +47,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RTx-FL-XJW" userLabel="statusView">
-                        <rect key="frame" x="53" y="155" width="297" height="20"/>
+                        <rect key="frame" x="53" y="154" width="297" height="20"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4j-0P-gax" userLabel="leftSeperator">
                                 <rect key="frame" x="0.0" y="10" width="114" height="1"/>
@@ -87,17 +87,23 @@
                             <constraint firstItem="ikF-ON-YE4" firstAttribute="centerY" secondItem="RTx-FL-XJW" secondAttribute="centerY" id="nEG-07-Hmg"/>
                         </constraints>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bn-4q-BML">
+                        <rect key="frame" x="146" y="74" width="84" height="30"/>
+                        <state key="normal" title="Get the clue"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="LWm-f0-Lj3" secondAttribute="trailing" constant="25" id="0Ak-Vh-5wk"/>
                     <constraint firstItem="HLK-LV-SJE" firstAttribute="leading" secondItem="4Od-hl-ENS" secondAttribute="leading" id="1fw-Kr-Vb0"/>
                     <constraint firstAttribute="trailing" secondItem="RTx-FL-XJW" secondAttribute="trailing" constant="25" id="3g8-cp-W1y"/>
                     <constraint firstItem="LWm-f0-Lj3" firstAttribute="top" secondItem="2Rz-dN-Xtc" secondAttribute="bottom" constant="8" id="4UH-QM-wmD"/>
+                    <constraint firstItem="2bn-4q-BML" firstAttribute="centerX" secondItem="HxZ-h8-hOq" secondAttribute="centerX" id="C5B-E7-kqf"/>
                     <constraint firstItem="4Od-hl-ENS" firstAttribute="top" secondItem="HxZ-h8-hOq" secondAttribute="top" id="O7t-VN-9Iq"/>
                     <constraint firstAttribute="bottom" secondItem="RTx-FL-XJW" secondAttribute="bottom" constant="5" id="T7N-RS-8id"/>
                     <constraint firstItem="2Rz-dN-Xtc" firstAttribute="leading" secondItem="4Od-hl-ENS" secondAttribute="trailing" constant="25" id="TnY-Dn-7zx"/>
                     <constraint firstItem="LWm-f0-Lj3" firstAttribute="leading" secondItem="4Od-hl-ENS" secondAttribute="leading" id="blg-IW-rEG"/>
                     <constraint firstAttribute="trailing" secondItem="2Rz-dN-Xtc" secondAttribute="trailing" constant="25" id="dUL-gK-bsL"/>
+                    <constraint firstItem="2bn-4q-BML" firstAttribute="centerY" secondItem="HxZ-h8-hOq" secondAttribute="centerY" id="fsq-Qc-tvv"/>
                     <constraint firstItem="RTx-FL-XJW" firstAttribute="top" secondItem="LWm-f0-Lj3" secondAttribute="bottom" id="k6w-3R-fhU"/>
                     <constraint firstItem="2Rz-dN-Xtc" firstAttribute="top" secondItem="HxZ-h8-hOq" secondAttribute="top" id="mv1-rn-wVt"/>
                     <constraint firstItem="4Od-hl-ENS" firstAttribute="leading" secondItem="HxZ-h8-hOq" secondAttribute="leading" constant="53" id="rTU-Ol-Miu"/>
@@ -108,6 +114,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="descriptionLabel" destination="LWm-f0-Lj3" id="fpE-cB-Cup"/>
+                <outlet property="getClueButton" destination="2bn-4q-BML" id="a24-DY-Sb2"/>
                 <outlet property="statusLabel" destination="ikF-ON-YE4" id="Otj-5G-k3P"/>
                 <outlet property="statusLeftSeperator" destination="q4j-0P-gax" id="0up-Vl-fWu"/>
                 <outlet property="statusRightSeperator" destination="OAK-Zc-OQw" id="ktk-xz-WlM"/>

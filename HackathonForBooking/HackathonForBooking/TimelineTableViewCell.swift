@@ -16,6 +16,8 @@ class TimelineTableViewCell: UITableViewCell {
     @IBOutlet weak var statusLeftSeperator: UIView!
     @IBOutlet weak var statusRightSeperator: UIView!
 
+    @IBOutlet weak var getClueButton: UIButton!
+
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var taskNameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -51,6 +53,11 @@ class TimelineTableViewCell: UITableViewCell {
         }
     }
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        getClueButton.isHidden = true
+    }
+
     override func prepareForReuse() {
         super.prepareForReuse()
         titleLabel.text = nil
@@ -58,6 +65,7 @@ class TimelineTableViewCell: UITableViewCell {
         descriptionLabel.text = nil
         thumbnailImageView.image = nil
         statusView.isHidden = false
+        getClueButton.isHidden = true
     }
 
     var bubbleRadius: CGFloat = 2.0 {
@@ -135,5 +143,10 @@ extension TimelineTableViewCell {
         timelinePoint.color = color
 
         statusFinished = task.taskFinished
+    }
+
+    func setupWaitForClue() {
+        setupNotDisplaying()
+        getClueButton.isHidden = false
     }
 }
