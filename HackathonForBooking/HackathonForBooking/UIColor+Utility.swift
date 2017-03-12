@@ -17,4 +17,8 @@ extension UIColor {
     class func themeGray() -> UIColor {
         return UIColor(red: 184.0 / 255.0, green: 184.0 / 255.0, blue: 184.0 / 255.0, alpha: 1.0)
     }
+    
+    class func themeOrange() -> UIColor {
+        return UIColor(red: 251.0 / 255.0, green: 184.0 / 255.0, blue: 24.0 / 255.0, alpha: 1.0)
+    }
 }

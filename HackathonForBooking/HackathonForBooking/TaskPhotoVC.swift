@@ -15,6 +15,13 @@ class TaskPhotoVC: UIViewController {
     @IBOutlet weak var taskContent: UILabel!
     @IBOutlet weak var btnFinish: UIButton!
     @IBOutlet weak var imgTask: UIImageView!
+    @IBOutlet weak var btnUseCoupon: UIButton! {
+        didSet {
+            self.btnUseCoupon.layer.cornerRadius = 10
+            self.btnUseCoupon.layer.borderColor = UIColor.themeOrange().cgColor
+            self.btnUseCoupon.layer.borderWidth = 3.0
+        }
+    }
     
     var isNew = false
     var task: TaskObject?
@@ -34,8 +41,26 @@ class TaskPhotoVC: UIViewController {
     
     //MARK: - Private Methods
     fileprivate func startUI() {
-        self.taskTitle.text = self.task?.taskTitle
-        self.taskContent.text = self.task?.taskContent
+        if let task = self.task {
+            self.title = "Task\(task.taskID)"
+            
+            self.taskTitle.text = task.taskTitle
+            
+            self.taskContent.text = task.taskContent
+            
+            self.addNavigationBarItem()
+        }
+    }
+    
+    fileprivate func addNavigationBarItem() {
+        let rightBarItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(TaskPhotoVC.toPlaceDetail))
+        self.navigationItem.rightBarButtonItem = rightBarItem
+    }
+    
+    @objc fileprivate func toPlaceDetail() {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "PlaceVC")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func takePhoto(_ sender: Any) {
@@ -88,9 +113,23 @@ class TaskPhotoVC: UIViewController {
         if let task = task, task.taskPhoto != nil {
             task.taskFinished = true
             TaskSingleTon.sharedInstance.didFinishTask(task)
+        } else {
+            let alert = UIAlertController(title: "Warning", message: "Please provie a photo", preferredStyle: .alert)
+            let cancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(cancel)
+            self.present(alert, animated: true, completion: nil)
+            return
         }
 
         TaskSingleTon.sharedInstance.saveTasks()
+        
+        _ = self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func useCoupon(_ sender: Any) {
+        let sb = UIStoryboard(name: "Coupon", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "CouponViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
