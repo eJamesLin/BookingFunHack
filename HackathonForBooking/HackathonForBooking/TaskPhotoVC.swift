@@ -15,6 +15,13 @@ class TaskPhotoVC: UIViewController {
     @IBOutlet weak var taskContent: UILabel!
     @IBOutlet weak var btnFinish: UIButton!
     @IBOutlet weak var imgTask: UIImageView!
+    @IBOutlet weak var btnUseCoupon: UIButton! {
+        didSet {
+            self.btnUseCoupon.layer.cornerRadius = 10
+            self.btnUseCoupon.layer.borderColor = UIColor.themeOrange().cgColor
+            self.btnUseCoupon.layer.borderWidth = 3.0
+        }
+    }
     
     var isNew = false
     var task: TaskObject?
@@ -34,8 +41,13 @@ class TaskPhotoVC: UIViewController {
     
     //MARK: - Private Methods
     fileprivate func startUI() {
-        self.taskTitle.text = self.task?.taskTitle
-        self.taskContent.text = self.task?.taskContent
+        if let task = self.task {
+            self.title = "Task\(task.taskID)"
+            
+            self.taskTitle.text = task.taskTitle
+            
+            self.taskContent.text = task.taskContent
+        }
     }
     
     @IBAction func takePhoto(_ sender: Any) {
@@ -91,6 +103,8 @@ class TaskPhotoVC: UIViewController {
         }
 
         TaskSingleTon.sharedInstance.saveTasks()
+        
+        _ = self.navigationController?.popViewController(animated: true)
     }
 }
 
