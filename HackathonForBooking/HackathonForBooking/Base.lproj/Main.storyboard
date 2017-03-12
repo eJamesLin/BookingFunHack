@@ -89,6 +89,9 @@
                                 <state key="normal" title="Use Coupon">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="useCoupon:" destination="UbD-c5-pgZ" eventType="touchUpInside" id="tzW-hU-dib"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

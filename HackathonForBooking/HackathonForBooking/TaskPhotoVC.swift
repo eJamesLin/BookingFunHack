@@ -113,11 +113,22 @@ class TaskPhotoVC: UIViewController {
         if let task = task, task.taskPhoto != nil {
             task.taskFinished = true
             TaskSingleTon.sharedInstance.didFinishTask(task)
+        } else {
+            let alert = UIAlertController(title: "Warning", message: "Please provie a photo", preferredStyle: .alert)
+            let cancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(cancel)
+            self.present(alert, animated: true, completion: nil)
+            return
         }
 
         TaskSingleTon.sharedInstance.saveTasks()
         
         _ = self.navigationController?.popViewController(animated: true)
+    }
+    @IBAction func useCoupon(_ sender: Any) {
+        let sb = UIStoryboard(name: "Coupon", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "CouponViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
