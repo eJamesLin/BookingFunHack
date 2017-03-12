@@ -49,14 +49,14 @@ class TimelineTableViewController: UITableViewController {
                 }
 
                 TaskSingleTon.sharedInstance.saveTasks()
-                self.tableView.reloadData()
+                self.animateTableView(self.tableView)
             }
         })
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.reloadData()
+        animateTableView(tableView)
     }
 
     func showClueViewController() {
@@ -118,5 +118,27 @@ class TimelineTableViewController: UITableViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: "TaskPhotoVC") as! TaskPhotoVC
         vc.task = task
         navigationController?.pushViewController(vc, animated: true)
+    }
+
+    func animateTableView(_ tableView: UITableView) {
+        tableView.reloadData()
+
+        let cells = tableView.visibleCells
+        let tableHeight: CGFloat = tableView.bounds.size.height
+
+        for cell in cells {
+            cell.transform = CGAffineTransform(translationX: 0, y: tableHeight)
+        }
+
+        var index = 0
+
+        for c in cells {
+            let cell: UITableViewCell = c
+            UIView.animate(withDuration: 1, delay: 0.1 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0.1, options: .curveLinear, animations: {
+                cell.transform = CGAffineTransform(translationX: 0, y: 0);
+            }, completion: nil)
+
+            index += 1
+        }
     }
 }
