@@ -40,7 +40,9 @@ class StartViewController: UIViewController {
         let titleView = UINib(nibName: "NavigationTitleView", bundle: nil).instantiate(withOwner: nil, options: nil).first as? UIView
         navigationItem.titleView = titleView
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Give up", style: .done, target: self, action: #selector(giveUpTasks))
+        let barButtonItem = UIBarButtonItem(title: "New", style: .done, target: self, action: #selector(giveUpTasks))
+        barButtonItem.tintColor = UIColor.white
+        navigationItem.rightBarButtonItem = barButtonItem
 
         //
         bestCollectionView.register(UINib(nibName: ChallengeCollectionViewCell.className(), bundle:nil),
