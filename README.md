@@ -1,30 +1,20 @@
-# README #
+## Book.Fun
+### @ Booking.com taipei-hackathon
 
-This README would normally document whatever steps are necessary to get your application up and running.
 
-### What is this repository for? ###
+<img height="420" src="https://cloud.githubusercontent.com/assets/4845370/23842045/aebd4bde-07ec-11e7-8a57-7453561bd1c4.png">
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
-### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-This is a repository for Booking.com Hack at Taipei
 
-### Contribution guidelines ###
 
-* Writing tests
-* Code review
-* Other guidelines
 
-### Who do I talk to? ###
 
-* Repo owner or admin
-* Other community or team contact
+
+
+
+
+
+
+
+
