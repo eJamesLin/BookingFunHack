@@ -27,6 +27,7 @@
 		5397944E1E73F1EB00B12B96 /* PlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5397944D1E73F1EB00B12B96 /* PlaceVC.swift */; };
 		539794501E73F99D00B12B96 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5397944F1E73F99D00B12B96 /* MapKit.framework */; };
 		539794541E7518DB00B12B96 /* RewardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539794531E7518DB00B12B96 /* RewardVC.swift */; };
+		92FE67635A5A7514B14D7BBB /* Pods_BookingFunHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6B1A9D94ADF46CCFC37995B /* Pods_BookingFunHack.framework */; };
 		DB50E00D1E73F99500203C7B /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB50E00B1E73F99500203C7B /* Start.storyboard */; };
 		DB50E00E1E73F99500203C7B /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50E00C1E73F99500203C7B /* StartViewController.swift */; };
 		DB50E0161E73F9B500203C7B /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50E0101E73F9B500203C7B /* Timeline.swift */; };
@@ -40,7 +41,7 @@
 		DB50E0271E74FC7B00203C7B /* ChallengeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50E0251E74FC7B00203C7B /* ChallengeCollectionViewCell.swift */; };
 		DB50E0281E74FC7B00203C7B /* ChallengeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB50E0261E74FC7B00203C7B /* ChallengeCollectionViewCell.xib */; };
 		DB50E02B1E751AD000203C7B /* MLStarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50E02A1E751AD000203C7B /* MLStarsView.swift */; };
-		E1D6D348CFB895C5629E9C6A /* Pods_HackathonForBooking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCD3C6FD89FBA5DE77E1302 /* Pods_HackathonForBooking.framework */; };
+		E1D6D348CFB895C5629E9C6A /* Pods_BookingFunHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCD3C6FD89FBA5DE77E1302 /* Pods_BookingFunHack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +54,7 @@
 		1431BCE41E74FF0C0095FE9E /* CongratsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratsViewController.swift; sourceTree = "<group>"; };
 		22C6DD061E74E60100443C55 /* Coupon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Coupon.storyboard; sourceTree = "<group>"; };
 		22C6DD081E74E61E00443C55 /* CouponViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponViewController.swift; sourceTree = "<group>"; };
-		539794301E727D4000B12B96 /* HackathonForBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackathonForBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		539794301E727D4000B12B96 /* BookingFunHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookingFunHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		539794331E727D4000B12B96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		539794381E727D4000B12B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5397943A1E727D4000B12B96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,8 +67,9 @@
 		5397944D1E73F1EB00B12B96 /* PlaceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceVC.swift; sourceTree = "<group>"; };
 		5397944F1E73F99D00B12B96 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		539794531E7518DB00B12B96 /* RewardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardVC.swift; sourceTree = "<group>"; };
-		A24FAD01D17A7A3D43EACCCC /* Pods-HackathonForBooking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonForBooking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackathonForBooking/Pods-HackathonForBooking.debug.xcconfig"; sourceTree = "<group>"; };
-		C17165545DD4C03D615A2B70 /* Pods-HackathonForBooking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonForBooking.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackathonForBooking/Pods-HackathonForBooking.release.xcconfig"; sourceTree = "<group>"; };
+		A24FAD01D17A7A3D43EACCCC /* Pods-BookingFunHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookingFunHack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookingFunHack/Pods-BookingFunHack.debug.xcconfig"; sourceTree = "<group>"; };
+		C17165545DD4C03D615A2B70 /* Pods-BookingFunHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookingFunHack.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookingFunHack/Pods-BookingFunHack.release.xcconfig"; sourceTree = "<group>"; };
+		C741F05693F4F400447ECE6D /* Pods-BookingFunHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookingFunHack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookingFunHack/Pods-BookingFunHack.debug.xcconfig"; sourceTree = "<group>"; };
 		DB50E00B1E73F99500203C7B /* Start.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
 		DB50E00C1E73F99500203C7B /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		DB50E0101E73F9B500203C7B /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
@@ -81,7 +83,9 @@
 		DB50E0251E74FC7B00203C7B /* ChallengeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB50E0261E74FC7B00203C7B /* ChallengeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeCollectionViewCell.xib; sourceTree = "<group>"; };
 		DB50E02A1E751AD000203C7B /* MLStarsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLStarsView.swift; sourceTree = "<group>"; };
-		ECCD3C6FD89FBA5DE77E1302 /* Pods_HackathonForBooking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackathonForBooking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6B1A9D94ADF46CCFC37995B /* Pods_BookingFunHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookingFunHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9C00DD32C62B81F8DE4A8BD /* Pods-BookingFunHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookingFunHack.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookingFunHack/Pods-BookingFunHack.release.xcconfig"; sourceTree = "<group>"; };
+		ECCD3C6FD89FBA5DE77E1302 /* Pods_BookingFunHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookingFunHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +94,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				539794501E73F99D00B12B96 /* MapKit.framework in Frameworks */,
-				E1D6D348CFB895C5629E9C6A /* Pods_HackathonForBooking.framework in Frameworks */,
+				E1D6D348CFB895C5629E9C6A /* Pods_BookingFunHack.framework in Frameworks */,
+				92FE67635A5A7514B14D7BBB /* Pods_BookingFunHack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +128,7 @@
 		539794271E727D4000B12B96 = {
 			isa = PBXGroup;
 			children = (
-				539794321E727D4000B12B96 /* HackathonForBooking */,
+				539794321E727D4000B12B96 /* BookingFunHack */,
 				539794311E727D4000B12B96 /* Products */,
 				9E1E4C81CE2D9ECEAAE52023 /* Pods */,
 				5B50EA6BA92670DFF9AED438 /* Frameworks */,
@@ -133,12 +138,12 @@
 		539794311E727D4000B12B96 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				539794301E727D4000B12B96 /* HackathonForBooking.app */,
+				539794301E727D4000B12B96 /* BookingFunHack.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		539794321E727D4000B12B96 /* HackathonForBooking */ = {
+		539794321E727D4000B12B96 /* BookingFunHack */ = {
 			isa = PBXGroup;
 			children = (
 				539794521E7518BA00B12B96 /* RewardVC */,
@@ -156,7 +161,8 @@
 				5397943C1E727D4000B12B96 /* LaunchScreen.storyboard */,
 				5397943F1E727D4000B12B96 /* Info.plist */,
 			);
-			path = HackathonForBooking;
+			name = BookingFunHack;
+			path = BookingFunHack;
 			sourceTree = "<group>";
 		};
 		539794511E7511B300B12B96 /* TaskVC */ = {
@@ -180,7 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				5397944F1E73F99D00B12B96 /* MapKit.framework */,
-				ECCD3C6FD89FBA5DE77E1302 /* Pods_HackathonForBooking.framework */,
+				ECCD3C6FD89FBA5DE77E1302 /* Pods_BookingFunHack.framework */,
+				E6B1A9D94ADF46CCFC37995B /* Pods_BookingFunHack.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -188,8 +195,10 @@
 		9E1E4C81CE2D9ECEAAE52023 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A24FAD01D17A7A3D43EACCCC /* Pods-HackathonForBooking.debug.xcconfig */,
-				C17165545DD4C03D615A2B70 /* Pods-HackathonForBooking.release.xcconfig */,
+				A24FAD01D17A7A3D43EACCCC /* Pods-BookingFunHack.debug.xcconfig */,
+				C17165545DD4C03D615A2B70 /* Pods-BookingFunHack.release.xcconfig */,
+				C741F05693F4F400447ECE6D /* Pods-BookingFunHack.debug.xcconfig */,
+				E9C00DD32C62B81F8DE4A8BD /* Pods-BookingFunHack.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -240,9 +249,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5397942F1E727D4000B12B96 /* HackathonForBooking */ = {
+		5397942F1E727D4000B12B96 /* BookingFunHack */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 539794421E727D4000B12B96 /* Build configuration list for PBXNativeTarget "HackathonForBooking" */;
+			buildConfigurationList = 539794421E727D4000B12B96 /* Build configuration list for PBXNativeTarget "BookingFunHack" */;
 			buildPhases = (
 				23C0A215BE1DF56BF35111FB /* [CP] Check Pods Manifest.lock */,
 				5397942C1E727D4000B12B96 /* Sources */,
@@ -255,9 +264,9 @@
 			);
 			dependencies = (
 			);
-			name = HackathonForBooking;
-			productName = HackathonForBooking;
-			productReference = 539794301E727D4000B12B96 /* HackathonForBooking.app */;
+			name = BookingFunHack;
+			productName = BookingFunHack;
+			productReference = 539794301E727D4000B12B96 /* BookingFunHack.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -281,7 +290,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5397942B1E727D4000B12B96 /* Build configuration list for PBXProject "HackathonForBooking" */;
+			buildConfigurationList = 5397942B1E727D4000B12B96 /* Build configuration list for PBXProject "BookingFunHack" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -294,7 +303,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5397942F1E727D4000B12B96 /* HackathonForBooking */,
+				5397942F1E727D4000B12B96 /* BookingFunHack */,
 			);
 		};
 /* End PBXProject section */
@@ -347,7 +356,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackathonForBooking/Pods-HackathonForBooking-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BookingFunHack/Pods-BookingFunHack-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F855DBCF23F6902BF763138E /* [CP] Embed Pods Frameworks */ = {
@@ -362,7 +371,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackathonForBooking/Pods-HackathonForBooking-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BookingFunHack/Pods-BookingFunHack-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -512,13 +521,13 @@
 		};
 		539794431E727D4000B12B96 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A24FAD01D17A7A3D43EACCCC /* Pods-HackathonForBooking.debug.xcconfig */;
+			baseConfigurationReference = C741F05693F4F400447ECE6D /* Pods-BookingFunHack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = HackathonForBooking/Info.plist;
+				INFOPLIST_FILE = BookingFunHack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.andyyang.HackathonForBooking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fun.booking.hack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -526,13 +535,13 @@
 		};
 		539794441E727D4000B12B96 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C17165545DD4C03D615A2B70 /* Pods-HackathonForBooking.release.xcconfig */;
+			baseConfigurationReference = E9C00DD32C62B81F8DE4A8BD /* Pods-BookingFunHack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = HackathonForBooking/Info.plist;
+				INFOPLIST_FILE = BookingFunHack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.andyyang.HackathonForBooking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fun.booking.hack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -541,7 +550,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5397942B1E727D4000B12B96 /* Build configuration list for PBXProject "HackathonForBooking" */ = {
+		5397942B1E727D4000B12B96 /* Build configuration list for PBXProject "BookingFunHack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				539794401E727D4000B12B96 /* Debug */,
@@ -550,7 +559,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		539794421E727D4000B12B96 /* Build configuration list for PBXNativeTarget "HackathonForBooking" */ = {
+		539794421E727D4000B12B96 /* Build configuration list for PBXNativeTarget "BookingFunHack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				539794431E727D4000B12B96 /* Debug */,

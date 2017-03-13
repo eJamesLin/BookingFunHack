@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fxl-Zx-oLr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OQC-yN-cCI">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,7 +14,7 @@
         <!--Task PhotoVC-->
         <scene sceneID="1Bh-qL-Po3">
             <objects>
-                <viewController storyboardIdentifier="TaskPhotoVC" id="UbD-c5-pgZ" customClass="TaskPhotoVC" customModule="HackathonForBooking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TaskPhotoVC" id="UbD-c5-pgZ" customClass="TaskPhotoVC" customModule="BookingFunHack" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KBU-sQ-Dgf"/>
                         <viewControllerLayoutGuide type="bottom" id="ljV-OD-wcV"/>
@@ -131,7 +131,7 @@
         <!--PlaceVC-->
         <scene sceneID="BUh-Pf-4Jq">
             <objects>
-                <viewController storyboardIdentifier="PlaceVC" id="rpi-zj-ogL" customClass="PlaceVC" customModule="HackathonForBooking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlaceVC" id="rpi-zj-ogL" customClass="PlaceVC" customModule="BookingFunHack" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qHH-Nn-AFQ"/>
                         <viewControllerLayoutGuide type="bottom" id="UEF-8o-w3G"/>
@@ -186,7 +186,7 @@
         <!--RewardVC-->
         <scene sceneID="OD2-9F-VBA">
             <objects>
-                <viewController storyboardIdentifier="RewardVC" id="fxl-Zx-oLr" customClass="RewardVC" customModule="HackathonForBooking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RewardVC" id="fxl-Zx-oLr" customClass="RewardVC" customModule="BookingFunHack" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nRW-IL-7Mp"/>
                         <viewControllerLayoutGuide type="bottom" id="JLk-Gv-0eE"/>
