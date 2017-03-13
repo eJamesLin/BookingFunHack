@@ -2,6 +2,7 @@
 ### @ Booking.com taipei-hackathon
 
 demo video: https://www.youtube.com/watch?v=25y2dZcozZE
+
 team 7: Andy, Ryan, Tim, CJ
 
 <img height="400" src="https://cloud.githubusercontent.com/assets/4845370/23842045/aebd4bde-07ec-11e7-8a57-7453561bd1c4.png"> 
