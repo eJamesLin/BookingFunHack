@@ -161,7 +161,6 @@
 				5397943C1E727D4000B12B96 /* LaunchScreen.storyboard */,
 				5397943F1E727D4000B12B96 /* Info.plist */,
 			);
-			name = BookingFunHack;
 			path = BookingFunHack;
 			sourceTree = "<group>";
 		};
